@@ -1,0 +1,138 @@
+Submission to ICML 2015 will be entirely electronic, via a web site
+(not email).  Information about the submission process and \LaTeX\ templates
+are available on the conference web site at:
+\begin{center}
+\textbf{\texttt{http://icml.cc/2015/}}
+\end{center}
+Send questions about submission and electronic templates to
+\texttt{program@icml.cc}.
+
+The guidelines below will be enforced for initial submissions and
+camera-ready copies.  Here is a brief summary:
+\begin{itemize}
+\item Submissions must be in PDF.
+\item The maximum paper length is \textbf{8 pages excluding references, and 10 pages
+  including references} (pages 9 and 10 must contain only references).
+\item Do \textbf{not include author information or acknowledgments} in your initial
+submission. 
+\item Your paper should be in \textbf{10 point Times font}.
+\item Make sure your PDF file only uses Type-1 fonts.
+\item Place figure captions {\em under} the figure (and omit titles from inside
+the graphic file itself).  Place table captions {\em over} the table.
+\item References must include page numbers whenever possible and be as complete
+as possible.  Place multiple citations in chronological order.  
+\item Do not alter the style template; in particular, do not compress the paper
+format by reducing the vertical spaces.
+\end{itemize}
+
+\subsection{Submitting Papers}
+
+{\bf Paper Deadline:} The deadline for paper submission to ICML 2015
+is at \textbf{23:59 Universal Time (3:59 Pacific Daylight Time) on February 6, 2015}.
+If your full submission does not reach us by this time, it will 
+not be considered for publication. There is no separate abstract submission.
+
+{\bf Anonymous Submission:} To facilitate blind review, no identifying
+author information should appear on the title page or in the paper
+itself.  Section~\ref{author info} will explain the details of how to
+format this.
+
+{\bf Simultaneous Submission:} ICML will not accept any paper which,
+at the time of submission, is under review for another conference or
+has already been published. This policy also applies to papers that
+overlap substantially in technical content with conference papers
+under review or previously published. ICML submissions must not be
+submitted to other conferences during ICML's review period. Authors
+may submit to ICML substantially different versions of journal papers
+that are currently under review by the journal, but not yet accepted
+at the time of submission. Informal publications, such as technical
+reports or papers in workshop proceedings which do not appear in
+print, do not fall under these restrictions.
+
+\medskip
+
+To ensure our ability to print submissions, authors must provide their
+manuscripts in \textbf{PDF} format.  Furthermore, please make sure
+that files contain only Type-1 fonts (e.g.,~using the program {\tt
+  pdffonts} in linux or using File/DocumentProperties/Fonts in
+Acrobat).  Other fonts (like Type-3) might come from graphics files
+imported into the document.
+
+Authors using \textbf{Word} must convert their document to PDF.  Most
+of the latest versions of Word have the facility to do this
+automatically.  Submissions will not be accepted in Word format or any
+format other than PDF. Really. We're not joking. Don't send Word.
+
+Those who use \textbf{\LaTeX} to format their accepted papers need to pay close
+attention to the typefaces used.  Specifically, when producing the PDF by first
+converting the dvi output of \LaTeX\ to Postscript the default behavior is to
+use non-scalable Type-3 PostScript bitmap fonts to represent the standard
+\LaTeX\ fonts. The resulting document is difficult to read in electronic form;
+the type appears fuzzy. To avoid this problem, dvips must be instructed to use
+an alternative font map.  This can be achieved with the following two commands:
+
+{\footnotesize
+\begin{verbatim}
+dvips -Ppdf -tletter -G0 -o paper.ps paper.dvi
+ps2pdf paper.ps
+\end{verbatim}}
+Note that it is a zero following the ``-G''.  This tells dvips to use
+the config.pdf file (and this file refers to a better font mapping).
+
+A better alternative is to use the \textbf{pdflatex} program instead of
+straight \LaTeX. This program avoids the Type-3 font problem, however you must
+ensure that all of the fonts are embedded (use {\tt pdffonts}). If they are
+not, you need to configure pdflatex to use a font map file that specifies that
+the fonts be embedded. Also you should ensure that images are not downsampled
+or otherwise compressed in a lossy way.
+
+Note that the 2015 style files use the {\tt hyperref} package to
+make clickable links in documents.  If this causes problems for you,
+add {\tt nohyperref} as one of the options to the {\tt icml2015}
+usepackage statement.
+
+\subsection{Reacting to Reviews}
+
+We will continue the ICML tradition in which the authors are given the
+option of providing a short reaction to the initial reviews. These
+reactions will be taken into account in the discussion among the
+reviewers and area chairs.
+
+\subsection{Submitting Final Camera-Ready Copy}
+
+The final versions of papers accepted for publication should follow the
+same format and naming convention as initial submissions, except of
+course that the normal author information (names and affiliations)
+should be given.  See Section~\ref{final author} for details of how to
+format this.
+
+The footnote, ``Preliminary work.  Under review by the International
+Conference on Machine Learning (ICML).  Do not distribute.'' must be
+modified to ``\textit{Proceedings of the
+$\mathit{31}^{st}$ International Conference on Machine Learning},
+Lille, France, 2015.  JMLR: W\&CP volume 37. 
+Copyright 2015 by the author(s).''
+
+For those using the \textbf{\LaTeX} style file, simply change
+$\mathtt{\backslash usepackage\{icml2015\}}$ to 
+
+$$\mathtt{\backslash usepackage[accepted]\{icml2015\}}$$
+
+\noindent
+Authors using \textbf{Word} must edit the
+footnote on the first page of the document themselves.
+
+Camera-ready copies should have the title of the paper as running head
+on each page except the first one.  The running title consists of a
+single line centered above a horizontal rule which is $1$ point thick.
+The running head should be centered, bold and in $9$ point type.  The
+rule should be $10$ points above the main text.  For those using the
+\textbf{\LaTeX} style file, the original title is automatically set as running
+head using the {\tt fancyhdr} package which is included in the ICML
+2015 style file package.  In case that the original title exceeds the
+size restrictions, a shorter form can be supplied by using
+
+\verb|\icmltitlerunning{...}|
+
+just before $\mathtt{\backslash begin\{document\}}$.
+Authors using \textbf{Word} must edit the header of the document themselves.

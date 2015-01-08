@@ -1,2 +1,2 @@
-# rnngsn_icml15
-Paper for RNN-GSN
+# RNN-GSN for ICML15
+LATEX paper for RNN-GSN
