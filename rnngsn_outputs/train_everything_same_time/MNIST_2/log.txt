@@ -1,0 +1,327 @@
+----------MODEL 2, MNIST_2-----------
+
+Saving config
+Namespace(annealing=0.995, batch_size=200, classes=10, continue_training=0, cost_funct='binary_crossentropy', data_path='../data/', dataset='MNIST_2', early_stop_length=30, early_stop_threshold=0.9995, gsn_batch_size=100, hessian_free=0, hidden_act='tanh', hidden_add_noise_sigma=2, hidden_size=1500, initialize_gsn=0, input_salt_and_pepper=0.4, input_sampling=1, layers=3, learning_rate=0.25, momentum=0.5, n_epoch=500, noiseless_h1=1, recurrent_hidden_act='tanh', recurrent_hidden_size=1500, regularize_weight=0, save_frequency=10, test_model=0, vis_init=0, visible_act='sigmoid', walkbacks=5)
+Sequencing MNIST data...
+train set size: 60000
+train set size: 10000
+train set size: 10000
+train set size: 54214
+train set size: 9154
+train set size: 8925
+Sequencing done.
+
+Using hyperbolic tangent activation for hiddens
+Using sigmoid activation for visible layer
+Using hyperbolic tangent activation for recurrent hiddens
+
+
+Using binary cross-entropy cost!
+
+
+
+Creating recurrent step scan.
+Using W_u_h1 and b_1
+Using W_u_h3 and b_3
+Now for reconstruction sample
+Using W_u_h1 and b_1
+Using W_u_h3 and b_3
+Building the GSN graph given hiddens with 5 walkbacks
+GSN (prediction) Walkback 1/5
+even layer updates
+updating layer 0
+using W_0_1.T
+Activation for visible layer
+Sampling from input
+updating layer 2
+using W_1_2 and W_2_3.T
+Adding pre-activation gaussian noise for layer 2
+Hidden units activation for layer 2
+Adding post-activation gaussian noise for layer 2
+odd layer updates
+updating layer 1
+using W_0_1 and W_1_2.T
+>>NO noise in first hidden layer
+Hidden units activation for layer 1
+updating layer 3
+using W_2_3
+Adding pre-activation gaussian noise for layer 3
+Hidden units activation for layer 3
+Adding post-activation gaussian noise for layer 3
+done full update.
+
+GSN (prediction) Walkback 2/5
+even layer updates
+updating layer 0
+using W_0_1.T
+Activation for visible layer
+Sampling from input
+updating layer 2
+using W_1_2 and W_2_3.T
+Adding pre-activation gaussian noise for layer 2
+Hidden units activation for layer 2
+Adding post-activation gaussian noise for layer 2
+odd layer updates
+updating layer 1
+using W_0_1 and W_1_2.T
+>>NO noise in first hidden layer
+Hidden units activation for layer 1
+updating layer 3
+using W_2_3
+Adding pre-activation gaussian noise for layer 3
+Hidden units activation for layer 3
+Adding post-activation gaussian noise for layer 3
+done full update.
+
+GSN (prediction) Walkback 3/5
+even layer updates
+updating layer 0
+using W_0_1.T
+Activation for visible layer
+Sampling from input
+updating layer 2
+using W_1_2 and W_2_3.T
+Adding pre-activation gaussian noise for layer 2
+Hidden units activation for layer 2
+Adding post-activation gaussian noise for layer 2
+odd layer updates
+updating layer 1
+using W_0_1 and W_1_2.T
+>>NO noise in first hidden layer
+Hidden units activation for layer 1
+updating layer 3
+using W_2_3
+Adding pre-activation gaussian noise for layer 3
+Hidden units activation for layer 3
+Adding post-activation gaussian noise for layer 3
+done full update.
+
+GSN (prediction) Walkback 4/5
+even layer updates
+updating layer 0
+using W_0_1.T
+Activation for visible layer
+Sampling from input
+updating layer 2
+using W_1_2 and W_2_3.T
+Adding pre-activation gaussian noise for layer 2
+Hidden units activation for layer 2
+Adding post-activation gaussian noise for layer 2
+odd layer updates
+updating layer 1
+using W_0_1 and W_1_2.T
+>>NO noise in first hidden layer
+Hidden units activation for layer 1
+updating layer 3
+using W_2_3
+Adding pre-activation gaussian noise for layer 3
+Hidden units activation for layer 3
+Adding post-activation gaussian noise for layer 3
+done full update.
+
+GSN (prediction) Walkback 5/5
+even layer updates
+updating layer 0
+using W_0_1.T
+Activation for visible layer
+Sampling from input
+updating layer 2
+using W_1_2 and W_2_3.T
+Adding pre-activation gaussian noise for layer 2
+Hidden units activation for layer 2
+Adding post-activation gaussian noise for layer 2
+odd layer updates
+updating layer 1
+using W_0_1 and W_1_2.T
+>>NO noise in first hidden layer
+Hidden units activation for layer 1
+updating layer 3
+using W_2_3
+Adding pre-activation gaussian noise for layer 3
+Hidden units activation for layer 3
+Adding post-activation gaussian noise for layer 3
+done full update.
+
+Building the GSN graph given hiddens with 5 walkbacks
+GSN (prediction) Walkback 1/5
+even layer updates
+updating layer 0
+using W_0_1.T
+Activation for visible layer
+Sampling from input
+updating layer 2
+using W_1_2 and W_2_3.T
+Hidden units activation for layer 2
+odd layer updates
+updating layer 1
+using W_0_1 and W_1_2.T
+>>NO noise in first hidden layer
+Hidden units activation for layer 1
+updating layer 3
+using W_2_3
+Hidden units activation for layer 3
+done full update.
+
+GSN (prediction) Walkback 2/5
+even layer updates
+updating layer 0
+using W_0_1.T
+Activation for visible layer
+Sampling from input
+updating layer 2
+using W_1_2 and W_2_3.T
+Hidden units activation for layer 2
+odd layer updates
+updating layer 1
+using W_0_1 and W_1_2.T
+>>NO noise in first hidden layer
+Hidden units activation for layer 1
+updating layer 3
+using W_2_3
+Hidden units activation for layer 3
+done full update.
+
+GSN (prediction) Walkback 3/5
+even layer updates
+updating layer 0
+using W_0_1.T
+Activation for visible layer
+Sampling from input
+updating layer 2
+using W_1_2 and W_2_3.T
+Hidden units activation for layer 2
+odd layer updates
+updating layer 1
+using W_0_1 and W_1_2.T
+>>NO noise in first hidden layer
+Hidden units activation for layer 1
+updating layer 3
+using W_2_3
+Hidden units activation for layer 3
+done full update.
+
+GSN (prediction) Walkback 4/5
+even layer updates
+updating layer 0
+using W_0_1.T
+Activation for visible layer
+Sampling from input
+updating layer 2
+using W_1_2 and W_2_3.T
+Hidden units activation for layer 2
+odd layer updates
+updating layer 1
+using W_0_1 and W_1_2.T
+>>NO noise in first hidden layer
+Hidden units activation for layer 1
+updating layer 3
+using W_2_3
+Hidden units activation for layer 3
+done full update.
+
+GSN (prediction) Walkback 5/5
+even layer updates
+updating layer 0
+using W_0_1.T
+Activation for visible layer
+Sampling from input
+updating layer 2
+using W_1_2 and W_2_3.T
+Hidden units activation for layer 2
+odd layer updates
+updating layer 1
+using W_0_1 and W_1_2.T
+>>NO noise in first hidden layer
+Hidden units activation for layer 1
+updating layer 3
+using W_2_3
+Hidden units activation for layer 3
+done full update.
+
+
+Cost w.r.t p(X|...) at every step in the graph
+params: [W_0_1, W_1_2, W_2_3, b_0, b_1, b_2, b_3, W_u_h1, W_u_h3, W_u_u, W_x_u, b_u]
+creating functions...
+rnn-gsn learn...
+rnn-gsn cost...
+Training/cost functions done.
+Compilation took 32.11890 seconds.
+
+
+Creating graph for noisy reconstruction function at checkpoints during training.
+Done compiling all functions.
+Total time took 34.01756 seconds.
+
+
+Performing one walkback in network state sampling.
+odd layer updates
+updating layer 1
+using W_0_1 and W_1_2.T
+>>NO noise in first hidden layer
+Hidden units activation for layer 1
+updating layer 3
+using W_2_3
+Adding pre-activation gaussian noise for layer 3
+Hidden units activation for layer 3
+Adding post-activation gaussian noise for layer 3
+even layer updates
+updating layer 0
+using W_0_1.T
+Activation for visible layer
+Sampling from input
+updating layer 2
+using W_1_2 and W_2_3.T
+Adding pre-activation gaussian noise for layer 2
+Hidden units activation for layer 2
+Adding post-activation gaussian noise for layer 2
+done full update.
+
+
+-----------TRAINING RNN-GSN------------
+
+train X size: [54214   784]
+valid X size: [9154  784]
+test X size: [8925  784]
+1 	Train: 0.411431 	Valid: 0.281259 	Test: 0.28112 	time: 3.503159 minutes	remaining: 29.13461 hours
+2 	Train: 0.279377 	Valid: 0.275331 	Test: 0.277147 	time: 3.497200 minutes	remaining: 29.05149 hours
+3 	Train: 0.274319 	Valid: 0.269524 	Test: 0.270578 	time: 3.474646 minutes	remaining: 28.92265 hours
+4 	Train: 0.267677 	Valid: 0.263617 	Test: 0.267078 	time: 3.459487 minutes	remaining: 28.79795 hours
+5 	Train: 0.26485 	Valid: 0.263199 	Test: 0.264706 	time: 3.442403 minutes	remaining: 28.67188 hours
+6 	Train: 0.264083 	Valid: 0.262448 	Test: 0.264023 	time: 3.446582 minutes	remaining: 28.57444 hours
+7 	Train: 0.263854 	Valid: 0.261736 	Test: 0.263496 	time: 3.445488 minutes	remaining: 28.48714 hours
+8 	Train: 0.263558 	Valid: 0.26209 	Test: 0.263497 	time: 3.447320 minutes	remaining: 28.40919 hours
+9 	Train: 0.263582 	Valid: 0.261569 	Test: 0.263523 	time: 3.443684 minutes	remaining: 28.33249 hours
+10 	Train: 0.263522 	Valid: 0.261939 	Test: 0.263378 	time: 3.440258 minutes	remaining: 28.25685 hours
+Took 1.2215089798 to sample 400 numbers
+11 	Train: 0.263582 	Valid: 0.26147 	Test: 0.26337 	time: 3.436971 minutes	remaining: 28.18211 hours
+12 	Train: 0.263461 	Valid: 0.261608 	Test: 0.263354 	time: 3.440709 minutes	remaining: 28.11280 hours
+13 	Train: 0.263457 	Valid: 0.26153 	Test: 0.263358 	time: 3.443690 minutes	remaining: 28.04720 hours
+14 	Train: 0.263449 	Valid: 0.261581 	Test: 0.263379 	time: 3.447118 minutes	remaining: 27.98476 hours
+15 	Train: 0.263442 	Valid: 0.261501 	Test: 0.26344 	time: 3.447114 minutes	remaining: 27.92297 hours
+16 	Train: 0.263587 	Valid: 0.2619 	Test: 0.263385 	time: 3.450358 minutes	remaining: 27.86337 hours
+17 	Train: 0.263435 	Valid: 0.261535 	Test: 0.263409 	time: 3.441604 minutes	remaining: 27.79987 hours
+18 	Train: 0.263446 	Valid: 0.26152 	Test: 0.263362 	time: 3.444564 minutes	remaining: 27.73837 hours
+19 	Train: 0.26346 	Valid: 0.26162 	Test: 0.263425 	time: 3.446016 minutes	remaining: 27.67791 hours
+20 	Train: 0.263487 	Valid: 0.26162 	Test: 0.263428 	time: 3.443360 minutes	remaining: 27.61669 hours
+Took 1.22759985924 to sample 400 numbers
+21 	Train: 0.263522 	Valid: 0.261591 	Test: 0.26353 	time: 3.446072 minutes	remaining: 27.55687 hours
+22 	Train: 0.263555 	Valid: 0.261763 	Test: 0.263451 	time: 3.444697 minutes	remaining: 27.49677 hours
+23 	Train: 0.263587 	Valid: 0.261685 	Test: 0.263592 	time: 3.443039 minutes	remaining: 27.43633 hours
+24 	Train: 0.263601 	Valid: 0.261609 	Test: 0.263624 	time: 3.446914 minutes	remaining: 27.37742 hours
+25 	Train: 0.263649 	Valid: 0.261684 	Test: 0.263732 	time: 3.444524 minutes	remaining: 27.31788 hours
+26 	Train: 0.263721 	Valid: 0.261947 	Test: 0.263713 	time: 3.448681 minutes	remaining: 27.25976 hours
+27 	Train: 0.263813 	Valid: 0.261823 	Test: 0.263747 	time: 3.447170 minutes	remaining: 27.20125 hours
+28 	Train: 0.263854 	Valid: 0.261885 	Test: 0.263845 	time: 3.447377 minutes	remaining: 27.14287 hours
+29 	Train: 0.263939 	Valid: 0.262044 	Test: 0.264023 	time: 3.447419 minutes	remaining: 27.08456 hours
+30 	Train: 0.264001 	Valid: 0.262069 	Test: 0.264088 	time: 3.448510 minutes	remaining: 27.02660 hours
+Took 1.23332595825 to sample 400 numbers
+31 	Train: 0.264118 	Valid: 0.262092 	Test: 0.264051 	time: 3.442529 minutes	remaining: 26.96716 hours
+32 	Train: 0.264077 	Valid: 0.262223 	Test: 0.263791 	time: 3.449144 minutes	remaining: 26.90947 hours
+33 	Train: 0.264088 	Valid: 0.262136 	Test: 0.264087 	time: 3.444624 minutes	remaining: 26.85071 hours
+34 	Train: 0.264056 	Valid: 0.26218 	Test: 0.264077 	time: 3.445043 minutes	remaining: 26.79214 hours
+35 	Train: 0.264089 	Valid: 0.261946 	Test: 0.263902 	time: 3.446346 minutes	remaining: 26.73392 hours
+36 	Train: 0.263965 	Valid: 0.261874 	Test: 0.263759 	time: 3.447704 minutes	remaining: 26.67603 hours
+37 	Train: 0.263942 	Valid: 0.261916 	Test: 0.26344 	time: 3.444727 minutes	remaining: 26.61755 hours
+38 	Train: 0.263725 	Valid: 0.261841 	Test: 0.263431 	time: 3.443199 minutes	remaining: 26.55881 hours
+39 	Train: 0.26376 	Valid: 0.261655 	Test: 0.263585 	time: 3.445557 minutes	remaining: 26.50061 hours
+Took 1.22535014153 to sample 400 numbers

@@ -1,0 +1,834 @@
+----------MODEL 2, MNIST_3-----------
+
+Saving config
+Namespace(annealing=0.995, batch_size=200, classes=10, continue_training=0, cost_funct='binary_crossentropy', data_path='../data/', dataset='MNIST_3', early_stop_length=30, early_stop_threshold=0.9995, gsn_batch_size=100, hessian_free=0, hidden_act='tanh', hidden_add_noise_sigma=2, hidden_size=1500, initialize_gsn=0, input_salt_and_pepper=0.4, input_sampling=1, layers=3, learning_rate=0.25, momentum=0.5, n_epoch=500, noiseless_h1=1, recurrent_hidden_act='tanh', recurrent_hidden_size=1500, regularize_weight=0, save_frequency=10, test_model=0, vis_init=0, visible_act='sigmoid', walkbacks=5)
+Sequencing MNIST data...
+train set size: 60000
+train set size: 10000
+train set size: 10000
+train set size: 54215
+train set size: 9155
+train set size: 8925
+Sequencing done.
+
+Using hyperbolic tangent activation for hiddens
+Using sigmoid activation for visible layer
+Using hyperbolic tangent activation for recurrent hiddens
+
+
+Using binary cross-entropy cost!
+
+
+
+Creating recurrent step scan.
+Using W_u_h1 and b_1
+Using W_u_h3 and b_3
+Now for reconstruction sample
+Using W_u_h1 and b_1
+Using W_u_h3 and b_3
+Building the GSN graph given hiddens with 5 walkbacks
+GSN (prediction) Walkback 1/5
+even layer updates
+updating layer 0
+using W_0_1.T
+Activation for visible layer
+Sampling from input
+updating layer 2
+using W_1_2 and W_2_3.T
+Adding pre-activation gaussian noise for layer 2
+Hidden units activation for layer 2
+Adding post-activation gaussian noise for layer 2
+odd layer updates
+updating layer 1
+using W_0_1 and W_1_2.T
+>>NO noise in first hidden layer
+Hidden units activation for layer 1
+updating layer 3
+using W_2_3
+Adding pre-activation gaussian noise for layer 3
+Hidden units activation for layer 3
+Adding post-activation gaussian noise for layer 3
+done full update.
+
+GSN (prediction) Walkback 2/5
+even layer updates
+updating layer 0
+using W_0_1.T
+Activation for visible layer
+Sampling from input
+updating layer 2
+using W_1_2 and W_2_3.T
+Adding pre-activation gaussian noise for layer 2
+Hidden units activation for layer 2
+Adding post-activation gaussian noise for layer 2
+odd layer updates
+updating layer 1
+using W_0_1 and W_1_2.T
+>>NO noise in first hidden layer
+Hidden units activation for layer 1
+updating layer 3
+using W_2_3
+Adding pre-activation gaussian noise for layer 3
+Hidden units activation for layer 3
+Adding post-activation gaussian noise for layer 3
+done full update.
+
+GSN (prediction) Walkback 3/5
+even layer updates
+updating layer 0
+using W_0_1.T
+Activation for visible layer
+Sampling from input
+updating layer 2
+using W_1_2 and W_2_3.T
+Adding pre-activation gaussian noise for layer 2
+Hidden units activation for layer 2
+Adding post-activation gaussian noise for layer 2
+odd layer updates
+updating layer 1
+using W_0_1 and W_1_2.T
+>>NO noise in first hidden layer
+Hidden units activation for layer 1
+updating layer 3
+using W_2_3
+Adding pre-activation gaussian noise for layer 3
+Hidden units activation for layer 3
+Adding post-activation gaussian noise for layer 3
+done full update.
+
+GSN (prediction) Walkback 4/5
+even layer updates
+updating layer 0
+using W_0_1.T
+Activation for visible layer
+Sampling from input
+updating layer 2
+using W_1_2 and W_2_3.T
+Adding pre-activation gaussian noise for layer 2
+Hidden units activation for layer 2
+Adding post-activation gaussian noise for layer 2
+odd layer updates
+updating layer 1
+using W_0_1 and W_1_2.T
+>>NO noise in first hidden layer
+Hidden units activation for layer 1
+updating layer 3
+using W_2_3
+Adding pre-activation gaussian noise for layer 3
+Hidden units activation for layer 3
+Adding post-activation gaussian noise for layer 3
+done full update.
+
+GSN (prediction) Walkback 5/5
+even layer updates
+updating layer 0
+using W_0_1.T
+Activation for visible layer
+Sampling from input
+updating layer 2
+using W_1_2 and W_2_3.T
+Adding pre-activation gaussian noise for layer 2
+Hidden units activation for layer 2
+Adding post-activation gaussian noise for layer 2
+odd layer updates
+updating layer 1
+using W_0_1 and W_1_2.T
+>>NO noise in first hidden layer
+Hidden units activation for layer 1
+updating layer 3
+using W_2_3
+Adding pre-activation gaussian noise for layer 3
+Hidden units activation for layer 3
+Adding post-activation gaussian noise for layer 3
+done full update.
+
+Building the GSN graph given hiddens with 5 walkbacks
+GSN (prediction) Walkback 1/5
+even layer updates
+updating layer 0
+using W_0_1.T
+Activation for visible layer
+Sampling from input
+updating layer 2
+using W_1_2 and W_2_3.T
+Hidden units activation for layer 2
+odd layer updates
+updating layer 1
+using W_0_1 and W_1_2.T
+>>NO noise in first hidden layer
+Hidden units activation for layer 1
+updating layer 3
+using W_2_3
+Hidden units activation for layer 3
+done full update.
+
+GSN (prediction) Walkback 2/5
+even layer updates
+updating layer 0
+using W_0_1.T
+Activation for visible layer
+Sampling from input
+updating layer 2
+using W_1_2 and W_2_3.T
+Hidden units activation for layer 2
+odd layer updates
+updating layer 1
+using W_0_1 and W_1_2.T
+>>NO noise in first hidden layer
+Hidden units activation for layer 1
+updating layer 3
+using W_2_3
+Hidden units activation for layer 3
+done full update.
+
+GSN (prediction) Walkback 3/5
+even layer updates
+updating layer 0
+using W_0_1.T
+Activation for visible layer
+Sampling from input
+updating layer 2
+using W_1_2 and W_2_3.T
+Hidden units activation for layer 2
+odd layer updates
+updating layer 1
+using W_0_1 and W_1_2.T
+>>NO noise in first hidden layer
+Hidden units activation for layer 1
+updating layer 3
+using W_2_3
+Hidden units activation for layer 3
+done full update.
+
+GSN (prediction) Walkback 4/5
+even layer updates
+updating layer 0
+using W_0_1.T
+Activation for visible layer
+Sampling from input
+updating layer 2
+using W_1_2 and W_2_3.T
+Hidden units activation for layer 2
+odd layer updates
+updating layer 1
+using W_0_1 and W_1_2.T
+>>NO noise in first hidden layer
+Hidden units activation for layer 1
+updating layer 3
+using W_2_3
+Hidden units activation for layer 3
+done full update.
+
+GSN (prediction) Walkback 5/5
+even layer updates
+updating layer 0
+using W_0_1.T
+Activation for visible layer
+Sampling from input
+updating layer 2
+using W_1_2 and W_2_3.T
+Hidden units activation for layer 2
+odd layer updates
+updating layer 1
+using W_0_1 and W_1_2.T
+>>NO noise in first hidden layer
+Hidden units activation for layer 1
+updating layer 3
+using W_2_3
+Hidden units activation for layer 3
+done full update.
+
+
+Cost w.r.t p(X|...) at every step in the graph
+params: [W_0_1, W_1_2, W_2_3, b_0, b_1, b_2, b_3, W_u_h1, W_u_h3, W_u_u, W_x_u, b_u]
+creating functions...
+rnn-gsn learn...
+rnn-gsn cost...
+Training/cost functions done.
+Compilation took 31.74711 seconds.
+
+
+Creating graph for noisy reconstruction function at checkpoints during training.
+Done compiling all functions.
+Total time took 33.06601 seconds.
+
+
+Performing one walkback in network state sampling.
+odd layer updates
+updating layer 1
+using W_0_1 and W_1_2.T
+>>NO noise in first hidden layer
+Hidden units activation for layer 1
+updating layer 3
+using W_2_3
+Adding pre-activation gaussian noise for layer 3
+Hidden units activation for layer 3
+Adding post-activation gaussian noise for layer 3
+even layer updates
+updating layer 0
+using W_0_1.T
+Activation for visible layer
+Sampling from input
+updating layer 2
+using W_1_2 and W_2_3.T
+Adding pre-activation gaussian noise for layer 2
+Hidden units activation for layer 2
+Adding post-activation gaussian noise for layer 2
+done full update.
+
+
+-----------TRAINING RNN-GSN------------
+
+train X size: [54215   784]
+valid X size: [9155  784]
+test X size: [8925  784]
+1 	Train: 0.411445 	Valid: 0.280922 	Test: 0.281169 	time: 3.457611 minutes	remaining: 28.75580 hours
+2 	Train: 0.279349 	Valid: 0.27531 	Test: 0.276994 	time: 3.458268 minutes	remaining: 28.70090 hours
+3 	Train: 0.274154 	Valid: 0.269595 	Test: 0.270478 	time: 3.449221 minutes	remaining: 28.61919 hours
+4 	Train: 0.267718 	Valid: 0.263427 	Test: 0.266897 	time: 3.455837 minutes	remaining: 28.56327 hours
+5 	Train: 0.264861 	Valid: 0.263515 	Test: 0.264674 	time: 3.452381 minutes	remaining: 28.50097 hours
+6 	Train: 0.264016 	Valid: 0.262323 	Test: 0.26409 	time: 3.446808 minutes	remaining: 28.43262 hours
+7 	Train: 0.263736 	Valid: 0.261838 	Test: 0.263503 	time: 3.452038 minutes	remaining: 28.37352 hours
+8 	Train: 0.263568 	Valid: 0.261904 	Test: 0.263592 	time: 3.446181 minutes	remaining: 28.30880 hours
+9 	Train: 0.263611 	Valid: 0.261565 	Test: 0.263428 	time: 3.447951 minutes	remaining: 28.24732 hours
+10 	Train: 0.263546 	Valid: 0.262006 	Test: 0.263422 	time: 3.455572 minutes	remaining: 28.19286 hours
+Took 1.23579192162 to sample 400 numbers
+11 	Train: 0.263584 	Valid: 0.261516 	Test: 0.263448 	time: 3.451916 minutes	remaining: 28.13512 hours
+12 	Train: 0.263466 	Valid: 0.261517 	Test: 0.26343 	time: 3.451931 minutes	remaining: 28.07743 hours
+13 	Train: 0.263517 	Valid: 0.261513 	Test: 0.263393 	time: 3.456716 minutes	remaining: 28.02275 hours
+14 	Train: 0.263455 	Valid: 0.261446 	Test: 0.263316 	time: 3.451873 minutes	remaining: 27.96485 hours
+15 	Train: 0.263443 	Valid: 0.261604 	Test: 0.263412 	time: 3.452597 minutes	remaining: 27.90738 hours
+16 	Train: 0.263601 	Valid: 0.261865 	Test: 0.263348 	time: 3.457325 minutes	remaining: 27.85230 hours
+17 	Train: 0.26345 	Valid: 0.261373 	Test: 0.263472 	time: 3.449840 minutes	remaining: 27.79337 hours
+18 	Train: 0.26347 	Valid: 0.2616 	Test: 0.263446 	time: 3.446215 minutes	remaining: 27.73298 hours
+19 	Train: 0.263485 	Valid: 0.261455 	Test: 0.263444 	time: 3.446398 minutes	remaining: 27.67298 hours
+20 	Train: 0.263588 	Valid: 0.261582 	Test: 0.263393 	time: 3.453171 minutes	remaining: 27.61594 hours
+Took 1.23527002335 to sample 400 numbers
+21 	Train: 0.263574 	Valid: 0.261623 	Test: 0.263532 	time: 3.445507 minutes	remaining: 27.55594 hours
+22 	Train: 0.263617 	Valid: 0.261751 	Test: 0.263535 	time: 3.447127 minutes	remaining: 27.49676 hours
+23 	Train: 0.263657 	Valid: 0.261797 	Test: 0.263596 	time: 3.450553 minutes	remaining: 27.43892 hours
+24 	Train: 0.263738 	Valid: 0.26174 	Test: 0.263654 	time: 3.449466 minutes	remaining: 27.38074 hours
+25 	Train: 0.263764 	Valid: 0.261878 	Test: 0.263821 	time: 3.447071 minutes	remaining: 27.32186 hours
+26 	Train: 0.263835 	Valid: 0.262081 	Test: 0.263804 	time: 3.448253 minutes	remaining: 27.26345 hours
+27 	Train: 0.263895 	Valid: 0.26183 	Test: 0.263974 	time: 3.449843 minutes	remaining: 27.20558 hours
+28 	Train: 0.263945 	Valid: 0.261917 	Test: 0.264038 	time: 3.450143 minutes	remaining: 27.14781 hours
+29 	Train: 0.263979 	Valid: 0.262198 	Test: 0.263987 	time: 3.446378 minutes	remaining: 27.08905 hours
+30 	Train: 0.263994 	Valid: 0.261857 	Test: 0.264093 	time: 3.447001 minutes	remaining: 27.03053 hours
+Took 1.24600791931 to sample 400 numbers
+31 	Train: 0.26407 	Valid: 0.261936 	Test: 0.263794 	time: 3.447471 minutes	remaining: 26.97220 hours
+32 	Train: 0.264008 	Valid: 0.262183 	Test: 0.263864 	time: 3.447413 minutes	remaining: 26.91392 hours
+33 	Train: 0.263977 	Valid: 0.262103 	Test: 0.263615 	time: 3.448167 minutes	remaining: 26.85586 hours
+34 	Train: 0.263823 	Valid: 0.261829 	Test: 0.263776 	time: 3.448036 minutes	remaining: 26.79780 hours
+35 	Train: 0.263651 	Valid: 0.261467 	Test: 0.263645 	time: 3.448053 minutes	remaining: 26.73979 hours
+36 	Train: 0.263506 	Valid: 0.261612 	Test: 0.263463 	time: 3.448329 minutes	remaining: 26.68186 hours
+37 	Train: 0.263448 	Valid: 0.261263 	Test: 0.262802 	time: 3.451625 minutes	remaining: 26.62464 hours
+38 	Train: 0.263205 	Valid: 0.261247 	Test: 0.262861 	time: 3.446992 minutes	remaining: 26.56647 hours
+39 	Train: 0.263068 	Valid: 0.260846 	Test: 0.262994 	time: 3.451446 minutes	remaining: 26.50922 hours
+40 	Train: 0.262794 	Valid: 0.260811 	Test: 0.262782 	time: 3.458308 minutes	remaining: 26.45326 hours
+Took 1.24771094322 to sample 400 numbers
+41 	Train: 0.262682 	Valid: 0.260518 	Test: 0.262304 	time: 3.456958 minutes	remaining: 26.39698 hours
+42 	Train: 0.262368 	Valid: 0.26026 	Test: 0.2621 	time: 3.447064 minutes	remaining: 26.33883 hours
+43 	Train: 0.262281 	Valid: 0.259993 	Test: 0.261723 	time: 3.457930 minutes	remaining: 26.28263 hours
+44 	Train: 0.261973 	Valid: 0.259841 	Test: 0.261653 	time: 3.444658 minutes	remaining: 26.22408 hours
+45 	Train: 0.261742 	Valid: 0.259445 	Test: 0.261297 	time: 3.457084 minutes	remaining: 26.16768 hours
+46 	Train: 0.261412 	Valid: 0.259351 	Test: 0.260884 	time: 3.450087 minutes	remaining: 26.11007 hours
+47 	Train: 0.261162 	Valid: 0.259236 	Test: 0.260819 	time: 3.448271 minutes	remaining: 26.05217 hours
+48 	Train: 0.260771 	Valid: 0.258599 	Test: 0.260454 	time: 3.453425 minutes	remaining: 25.99510 hours
+49 	Train: 0.260629 	Valid: 0.258391 	Test: 0.259665 	time: 3.446436 minutes	remaining: 25.93694 hours
+50 	Train: 0.260374 	Valid: 0.257995 	Test: 0.259632 	time: 3.449657 minutes	remaining: 25.87929 hours
+Took 1.24534296989 to sample 400 numbers
+51 	Train: 0.260119 	Valid: 0.257517 	Test: 0.259656 	time: 3.448254 minutes	remaining: 25.82144 hours
+52 	Train: 0.25982 	Valid: 0.257378 	Test: 0.259661 	time: 3.468216 minutes	remaining: 25.76647 hours
+53 	Train: 0.259354 	Valid: 0.257092 	Test: 0.258901 	time: 3.452820 minutes	remaining: 25.70923 hours
+54 	Train: 0.2592 	Valid: 0.256965 	Test: 0.258402 	time: 3.464948 minutes	remaining: 25.65365 hours
+55 	Train: 0.258649 	Valid: 0.256571 	Test: 0.258218 	time: 3.459641 minutes	remaining: 25.59727 hours
+56 	Train: 0.258352 	Valid: 0.256374 	Test: 0.258142 	time: 3.452156 minutes	remaining: 25.53986 hours
+57 	Train: 0.258238 	Valid: 0.256059 	Test: 0.257648 	time: 3.457977 minutes	remaining: 25.48320 hours
+58 	Train: 0.257966 	Valid: 0.255735 	Test: 0.256898 	time: 3.451023 minutes	remaining: 25.42562 hours
+59 	Train: 0.257849 	Valid: 0.255245 	Test: 0.257722 	time: 3.460625 minutes	remaining: 25.36924 hours
+60 	Train: 0.257233 	Valid: 0.255264 	Test: 0.256668 	time: 3.451617 minutes	remaining: 25.31172 hours
+Took 1.25143194199 to sample 400 numbers
+61 	Train: 0.257047 	Valid: 0.25448 	Test: 0.256537 	time: 3.450140 minutes	remaining: 25.25402 hours
+62 	Train: 0.256999 	Valid: 0.254561 	Test: 0.256225 	time: 3.456682 minutes	remaining: 25.19709 hours
+63 	Train: 0.256779 	Valid: 0.253977 	Test: 0.255914 	time: 3.456715 minutes	remaining: 25.14015 hours
+64 	Train: 0.256317 	Valid: 0.254018 	Test: 0.25551 	time: 3.450803 minutes	remaining: 25.08251 hours
+65 	Train: 0.256245 	Valid: 0.25401 	Test: 0.255646 	time: 3.448849 minutes	remaining: 25.02466 hours
+66 	Train: 0.255964 	Valid: 0.253394 	Test: 0.255503 	time: 3.445467 minutes	remaining: 24.96646 hours
+67 	Train: 0.25576 	Valid: 0.253048 	Test: 0.255197 	time: 3.453270 minutes	remaining: 24.90911 hours
+68 	Train: 0.255522 	Valid: 0.253595 	Test: 0.254872 	time: 3.446160 minutes	remaining: 24.85101 hours
+69 	Train: 0.255582 	Valid: 0.252852 	Test: 0.254838 	time: 3.449954 minutes	remaining: 24.79332 hours
+70 	Train: 0.255261 	Valid: 0.253096 	Test: 0.254829 	time: 3.457654 minutes	remaining: 24.73642 hours
+Took 1.24068498611 to sample 400 numbers
+71 	Train: 0.255257 	Valid: 0.253025 	Test: 0.254599 	time: 3.451537 minutes	remaining: 24.67889 hours
+72 	Train: 0.254992 	Valid: 0.252313 	Test: 0.254317 	time: 3.457801 minutes	remaining: 24.62198 hours
+73 	Train: 0.254812 	Valid: 0.25276 	Test: 0.254104 	time: 3.449551 minutes	remaining: 24.56424 hours
+74 	Train: 0.254707 	Valid: 0.252005 	Test: 0.254363 	time: 3.449644 minutes	remaining: 24.50652 hours
+75 	Train: 0.254504 	Valid: 0.252012 	Test: 0.253954 	time: 3.458104 minutes	remaining: 24.44961 hours
+76 	Train: 0.254383 	Valid: 0.252452 	Test: 0.253542 	time: 3.459056 minutes	remaining: 24.39276 hours
+77 	Train: 0.254342 	Valid: 0.251867 	Test: 0.253647 	time: 3.456944 minutes	remaining: 24.33570 hours
+78 	Train: 0.254053 	Valid: 0.251615 	Test: 0.253926 	time: 3.447277 minutes	remaining: 24.27776 hours
+79 	Train: 0.254064 	Valid: 0.251608 	Test: 0.253227 	time: 3.457637 minutes	remaining: 24.22074 hours
+80 	Train: 0.253821 	Valid: 0.251347 	Test: 0.253452 	time: 3.455773 minutes	remaining: 24.16355 hours
+Took 1.246281147 to sample 400 numbers
+81 	Train: 0.253524 	Valid: 0.251015 	Test: 0.252696 	time: 3.452278 minutes	remaining: 24.10605 hours
+82 	Train: 0.253543 	Valid: 0.251001 	Test: 0.252837 	time: 3.459490 minutes	remaining: 24.04916 hours
+83 	Train: 0.253364 	Valid: 0.251031 	Test: 0.253342 	time: 3.461107 minutes	remaining: 23.99238 hours
+84 	Train: 0.253123 	Valid: 0.250041 	Test: 0.252201 	time: 3.456594 minutes	remaining: 23.93522 hours
+85 	Train: 0.252925 	Valid: 0.250752 	Test: 0.252357 	time: 3.448859 minutes	remaining: 23.87741 hours
+86 	Train: 0.252688 	Valid: 0.25044 	Test: 0.251721 	time: 3.451821 minutes	remaining: 23.81984 hours
+87 	Train: 0.252391 	Valid: 0.249678 	Test: 0.251878 	time: 3.451087 minutes	remaining: 23.76222 hours
+88 	Train: 0.252209 	Valid: 0.249302 	Test: 0.251241 	time: 3.458650 minutes	remaining: 23.70520 hours
+89 	Train: 0.252019 	Valid: 0.249145 	Test: 0.250861 	time: 3.449894 minutes	remaining: 23.64748 hours
+90 	Train: 0.251871 	Valid: 0.248641 	Test: 0.250907 	time: 3.459198 minutes	remaining: 23.59048 hours
+Took 1.24176311493 to sample 400 numbers
+91 	Train: 0.251592 	Valid: 0.248349 	Test: 0.25078 	time: 3.452133 minutes	remaining: 23.53293 hours
+92 	Train: 0.251206 	Valid: 0.24814 	Test: 0.250557 	time: 3.451080 minutes	remaining: 23.47530 hours
+93 	Train: 0.250614 	Valid: 0.247903 	Test: 0.249925 	time: 3.455862 minutes	remaining: 23.41803 hours
+94 	Train: 0.250475 	Valid: 0.246989 	Test: 0.249212 	time: 3.452922 minutes	remaining: 23.36054 hours
+95 	Train: 0.250285 	Valid: 0.24722 	Test: 0.249239 	time: 3.437425 minutes	remaining: 23.30194 hours
+96 	Train: 0.249933 	Valid: 0.246985 	Test: 0.249004 	time: 3.440513 minutes	remaining: 23.24359 hours
+97 	Train: 0.249522 	Valid: 0.247085 	Test: 0.248249 	time: 3.439806 minutes	remaining: 23.18521 hours
+98 	Train: 0.249405 	Valid: 0.246752 	Test: 0.248345 	time: 3.438131 minutes	remaining: 23.12674 hours
+99 	Train: 0.248824 	Valid: 0.245758 	Test: 0.248026 	time: 3.447980 minutes	remaining: 23.06896 hours
+100 	Train: 0.248685 	Valid: 0.246047 	Test: 0.247567 	time: 3.436648 minutes	remaining: 23.01042 hours
+Took 1.23987412453 to sample 400 numbers
+101 	Train: 0.248496 	Valid: 0.245397 	Test: 0.247307 	time: 3.439162 minutes	remaining: 22.95208 hours
+102 	Train: 0.247957 	Valid: 0.244838 	Test: 0.246993 	time: 3.452059 minutes	remaining: 22.89460 hours
+103 	Train: 0.247807 	Valid: 0.24532 	Test: 0.24704 	time: 3.438822 minutes	remaining: 22.83626 hours
+104 	Train: 0.247834 	Valid: 0.244774 	Test: 0.246813 	time: 3.436468 minutes	remaining: 22.77780 hours
+105 	Train: 0.247417 	Valid: 0.244276 	Test: 0.24653 	time: 3.437815 minutes	remaining: 22.71944 hours
+106 	Train: 0.247287 	Valid: 0.24419 	Test: 0.24637 	time: 3.453276 minutes	remaining: 22.66206 hours
+107 	Train: 0.247357 	Valid: 0.244307 	Test: 0.245812 	time: 3.451210 minutes	remaining: 22.60455 hours
+108 	Train: 0.246997 	Valid: 0.244274 	Test: 0.245869 	time: 3.451482 minutes	remaining: 22.54706 hours
+109 	Train: 0.246682 	Valid: 0.243888 	Test: 0.245492 	time: 3.452952 minutes	remaining: 22.48965 hours
+110 	Train: 0.246815 	Valid: 0.243887 	Test: 0.245536 	time: 3.435424 minutes	remaining: 22.43121 hours
+Took 1.24484205246 to sample 400 numbers
+111 	Train: 0.246616 	Valid: 0.243676 	Test: 0.245412 	time: 3.437954 minutes	remaining: 22.37293 hours
+112 	Train: 0.246383 	Valid: 0.243176 	Test: 0.245662 	time: 3.450498 minutes	remaining: 22.31540 hours
+113 	Train: 0.246191 	Valid: 0.243058 	Test: 0.245181 	time: 3.438132 minutes	remaining: 22.25716 hours
+114 	Train: 0.246131 	Valid: 0.242666 	Test: 0.244765 	time: 3.442660 minutes	remaining: 22.19919 hours
+115 	Train: 0.24606 	Valid: 0.24282 	Test: 0.244817 	time: 3.452850 minutes	remaining: 22.14180 hours
+116 	Train: 0.24593 	Valid: 0.243024 	Test: 0.244534 	time: 3.453258 minutes	remaining: 22.08443 hours
+117 	Train: 0.245717 	Valid: 0.242807 	Test: 0.244635 	time: 3.451469 minutes	remaining: 22.02696 hours
+118 	Train: 0.245652 	Valid: 0.242859 	Test: 0.244392 	time: 3.453499 minutes	remaining: 21.96960 hours
+119 	Train: 0.245581 	Valid: 0.242336 	Test: 0.24453 	time: 3.452063 minutes	remaining: 21.91216 hours
+120 	Train: 0.245424 	Valid: 0.242434 	Test: 0.244202 	time: 3.450209 minutes	remaining: 21.85462 hours
+Took 1.2393951416 to sample 400 numbers
+121 	Train: 0.245321 	Valid: 0.242192 	Test: 0.244237 	time: 3.440408 minutes	remaining: 21.79657 hours
+122 	Train: 0.245165 	Valid: 0.242397 	Test: 0.244296 	time: 3.451658 minutes	remaining: 21.73911 hours
+123 	Train: 0.245078 	Valid: 0.241916 	Test: 0.243967 	time: 3.450163 minutes	remaining: 21.68158 hours
+124 	Train: 0.245054 	Valid: 0.242036 	Test: 0.243733 	time: 3.434058 minutes	remaining: 21.62323 hours
+125 	Train: 0.245052 	Valid: 0.241939 	Test: 0.243919 	time: 3.438506 minutes	remaining: 21.56512 hours
+126 	Train: 0.244906 	Valid: 0.242033 	Test: 0.24381 	time: 3.437292 minutes	remaining: 21.50696 hours
+127 	Train: 0.244941 	Valid: 0.241827 	Test: 0.243354 	time: 3.442199 minutes	remaining: 21.44906 hours
+128 	Train: 0.244886 	Valid: 0.241467 	Test: 0.243588 	time: 3.439831 minutes	remaining: 21.39105 hours
+129 	Train: 0.244742 	Valid: 0.241561 	Test: 0.243174 	time: 3.450986 minutes	remaining: 21.33359 hours
+130 	Train: 0.244597 	Valid: 0.241556 	Test: 0.243127 	time: 3.448047 minutes	remaining: 21.27598 hours
+Took 1.25288391113 to sample 400 numbers
+131 	Train: 0.244563 	Valid: 0.241747 	Test: 0.243279 	time: 3.454069 minutes	remaining: 21.21866 hours
+132 	Train: 0.244479 	Valid: 0.241534 	Test: 0.243148 	time: 3.452821 minutes	remaining: 21.16128 hours
+133 	Train: 0.244439 	Valid: 0.241324 	Test: 0.24315 	time: 3.452072 minutes	remaining: 21.10387 hours
+134 	Train: 0.244126 	Valid: 0.241424 	Test: 0.242854 	time: 3.436044 minutes	remaining: 21.04572 hours
+135 	Train: 0.24417 	Valid: 0.241487 	Test: 0.243586 	time: 3.438585 minutes	remaining: 20.98770 hours
+136 	Train: 0.243876 	Valid: 0.241077 	Test: 0.242977 	time: 3.439912 minutes	remaining: 20.92974 hours
+137 	Train: 0.243966 	Valid: 0.240946 	Test: 0.242707 	time: 3.446617 minutes	remaining: 20.87210 hours
+138 	Train: 0.243902 	Valid: 0.240795 	Test: 0.242883 	time: 3.437812 minutes	remaining: 20.81407 hours
+139 	Train: 0.243947 	Valid: 0.241061 	Test: 0.242386 	time: 3.450852 minutes	remaining: 20.75661 hours
+140 	Train: 0.243798 	Valid: 0.240854 	Test: 0.242757 	time: 3.453995 minutes	remaining: 20.69929 hours
+Took 1.24723100662 to sample 400 numbers
+141 	Train: 0.243855 	Valid: 0.240554 	Test: 0.242495 	time: 3.453369 minutes	remaining: 20.64194 hours
+142 	Train: 0.243535 	Valid: 0.240734 	Test: 0.242587 	time: 3.441472 minutes	remaining: 20.58409 hours
+143 	Train: 0.243619 	Valid: 0.240312 	Test: 0.242715 	time: 3.441114 minutes	remaining: 20.52623 hours
+144 	Train: 0.243737 	Valid: 0.240789 	Test: 0.242399 	time: 3.449756 minutes	remaining: 20.46873 hours
+145 	Train: 0.243553 	Valid: 0.24005 	Test: 0.242552 	time: 3.451366 minutes	remaining: 20.41130 hours
+146 	Train: 0.24358 	Valid: 0.240244 	Test: 0.242209 	time: 3.441471 minutes	remaining: 20.35347 hours
+147 	Train: 0.243392 	Valid: 0.240386 	Test: 0.242126 	time: 3.440976 minutes	remaining: 20.29562 hours
+148 	Train: 0.243324 	Valid: 0.240387 	Test: 0.241984 	time: 3.438726 minutes	remaining: 20.23769 hours
+149 	Train: 0.243367 	Valid: 0.240109 	Test: 0.242175 	time: 3.437074 minutes	remaining: 20.17971 hours
+150 	Train: 0.243402 	Valid: 0.240056 	Test: 0.241734 	time: 3.440053 minutes	remaining: 20.12185 hours
+Took 1.2447719574 to sample 400 numbers
+151 	Train: 0.243098 	Valid: 0.240054 	Test: 0.241909 	time: 3.443189 minutes	remaining: 20.06411 hours
+152 	Train: 0.243272 	Valid: 0.240117 	Test: 0.242196 	time: 3.441147 minutes	remaining: 20.00631 hours
+153 	Train: 0.242923 	Valid: 0.239623 	Test: 0.241723 	time: 3.442251 minutes	remaining: 19.94855 hours
+154 	Train: 0.24312 	Valid: 0.239577 	Test: 0.242096 	time: 3.449275 minutes	remaining: 19.89106 hours
+155 	Train: 0.24303 	Valid: 0.239689 	Test: 0.241633 	time: 3.451899 minutes	remaining: 19.83367 hours
+156 	Train: 0.242815 	Valid: 0.239593 	Test: 0.241899 	time: 3.456315 minutes	remaining: 19.77643 hours
+157 	Train: 0.242723 	Valid: 0.2397 	Test: 0.241682 	time: 3.454841 minutes	remaining: 19.71914 hours
+158 	Train: 0.242854 	Valid: 0.239969 	Test: 0.241527 	time: 3.451729 minutes	remaining: 19.66174 hours
+159 	Train: 0.242994 	Valid: 0.24002 	Test: 0.241269 	time: 3.450833 minutes	remaining: 19.60430 hours
+160 	Train: 0.24267 	Valid: 0.239786 	Test: 0.241495 	time: 3.451034 minutes	remaining: 19.54686 hours
+Took 1.25098395348 to sample 400 numbers
+161 	Train: 0.24269 	Valid: 0.240018 	Test: 0.241698 	time: 3.448759 minutes	remaining: 19.48935 hours
+162 	Train: 0.242901 	Valid: 0.239206 	Test: 0.241614 	time: 3.450598 minutes	remaining: 19.43190 hours
+163 	Train: 0.242603 	Valid: 0.239314 	Test: 0.241338 	time: 3.445166 minutes	remaining: 19.37426 hours
+164 	Train: 0.242435 	Valid: 0.239587 	Test: 0.241078 	time: 3.438691 minutes	remaining: 19.31640 hours
+165 	Train: 0.242432 	Valid: 0.23947 	Test: 0.241649 	time: 3.441956 minutes	remaining: 19.25866 hours
+166 	Train: 0.242413 	Valid: 0.239179 	Test: 0.241224 	time: 3.438897 minutes	remaining: 19.20082 hours
+167 	Train: 0.242365 	Valid: 0.23912 	Test: 0.241113 	time: 3.441583 minutes	remaining: 19.14308 hours
+168 	Train: 0.242355 	Valid: 0.239425 	Test: 0.241025 	time: 3.439833 minutes	remaining: 19.08529 hours
+169 	Train: 0.242429 	Valid: 0.238948 	Test: 0.240748 	time: 3.443742 minutes	remaining: 19.02762 hours
+170 	Train: 0.242453 	Valid: 0.239133 	Test: 0.241049 	time: 3.452358 minutes	remaining: 18.97024 hours
+Took 1.24332785606 to sample 400 numbers
+171 	Train: 0.242157 	Valid: 0.23912 	Test: 0.240724 	time: 3.451486 minutes	remaining: 18.91283 hours
+172 	Train: 0.242369 	Valid: 0.238566 	Test: 0.241035 	time: 3.460422 minutes	remaining: 18.85571 hours
+173 	Train: 0.242255 	Valid: 0.238957 	Test: 0.240901 	time: 3.448949 minutes	remaining: 18.79821 hours
+174 	Train: 0.242205 	Valid: 0.239054 	Test: 0.240905 	time: 3.449212 minutes	remaining: 18.74072 hours
+175 	Train: 0.242209 	Valid: 0.239302 	Test: 0.240851 	time: 3.449345 minutes	remaining: 18.68324 hours
+176 	Train: 0.242247 	Valid: 0.239115 	Test: 0.240727 	time: 3.448964 minutes	remaining: 18.62575 hours
+177 	Train: 0.242149 	Valid: 0.239187 	Test: 0.240731 	time: 3.451019 minutes	remaining: 18.56831 hours
+178 	Train: 0.242191 	Valid: 0.23914 	Test: 0.240516 	time: 3.452099 minutes	remaining: 18.51091 hours
+179 	Train: 0.241888 	Valid: 0.238614 	Test: 0.240436 	time: 3.454418 minutes	remaining: 18.45358 hours
+180 	Train: 0.241974 	Valid: 0.238667 	Test: 0.240804 	time: 3.448135 minutes	remaining: 18.39606 hours
+Took 1.24689912796 to sample 400 numbers
+181 	Train: 0.241998 	Valid: 0.23879 	Test: 0.240711 	time: 3.447744 minutes	remaining: 18.33853 hours
+182 	Train: 0.241912 	Valid: 0.238689 	Test: 0.240256 	time: 3.450109 minutes	remaining: 18.28106 hours
+183 	Train: 0.241947 	Valid: 0.238223 	Test: 0.240483 	time: 3.447260 minutes	remaining: 18.22352 hours
+184 	Train: 0.241854 	Valid: 0.23891 	Test: 0.240148 	time: 3.452964 minutes	remaining: 18.16614 hours
+185 	Train: 0.24185 	Valid: 0.238671 	Test: 0.240887 	time: 3.456346 minutes	remaining: 18.10885 hours
+186 	Train: 0.241697 	Valid: 0.23845 	Test: 0.240394 	time: 3.453365 minutes	remaining: 18.05148 hours
+187 	Train: 0.241909 	Valid: 0.238647 	Test: 0.240554 	time: 3.455291 minutes	remaining: 17.99415 hours
+188 	Train: 0.241875 	Valid: 0.238546 	Test: 0.240472 	time: 3.453644 minutes	remaining: 17.93678 hours
+189 	Train: 0.241781 	Valid: 0.238576 	Test: 0.240392 	time: 3.456908 minutes	remaining: 17.87950 hours
+190 	Train: 0.241684 	Valid: 0.238464 	Test: 0.240954 	time: 3.453405 minutes	remaining: 17.82212 hours
+Took 1.2450299263 to sample 400 numbers
+191 	Train: 0.241602 	Valid: 0.239058 	Test: 0.2405 	time: 3.453567 minutes	remaining: 17.76474 hours
+192 	Train: 0.241851 	Valid: 0.2382 	Test: 0.240413 	time: 3.455220 minutes	remaining: 17.70740 hours
+193 	Train: 0.241634 	Valid: 0.238669 	Test: 0.239917 	time: 3.448988 minutes	remaining: 17.64990 hours
+194 	Train: 0.2416 	Valid: 0.238479 	Test: 0.240487 	time: 3.451062 minutes	remaining: 17.59245 hours
+195 	Train: 0.241409 	Valid: 0.238815 	Test: 0.240512 	time: 3.456392 minutes	remaining: 17.53513 hours
+196 	Train: 0.241544 	Valid: 0.238775 	Test: 0.240242 	time: 3.456393 minutes	remaining: 17.47782 hours
+197 	Train: 0.241603 	Valid: 0.238687 	Test: 0.240194 	time: 3.453150 minutes	remaining: 17.42042 hours
+198 	Train: 0.241444 	Valid: 0.238438 	Test: 0.240306 	time: 3.455654 minutes	remaining: 17.36308 hours
+199 	Train: 0.241494 	Valid: 0.238486 	Test: 0.239934 	time: 3.451423 minutes	remaining: 17.30563 hours
+200 	Train: 0.241394 	Valid: 0.238027 	Test: 0.24055 	time: 3.452484 minutes	remaining: 17.24821 hours
+Took 1.24224686623 to sample 400 numbers
+201 	Train: 0.241341 	Valid: 0.238335 	Test: 0.240627 	time: 3.448605 minutes	remaining: 17.19069 hours
+202 	Train: 0.241411 	Valid: 0.238004 	Test: 0.239864 	time: 3.450087 minutes	remaining: 17.13321 hours
+203 	Train: 0.241338 	Valid: 0.237851 	Test: 0.239845 	time: 3.450375 minutes	remaining: 17.07573 hours
+204 	Train: 0.241354 	Valid: 0.238472 	Test: 0.24016 	time: 3.447377 minutes	remaining: 17.01818 hours
+205 	Train: 0.241506 	Valid: 0.237926 	Test: 0.239986 	time: 3.447867 minutes	remaining: 16.96065 hours
+206 	Train: 0.241223 	Valid: 0.238123 	Test: 0.239741 	time: 3.449699 minutes	remaining: 16.90315 hours
+207 	Train: 0.241408 	Valid: 0.238234 	Test: 0.240105 	time: 3.454344 minutes	remaining: 16.84577 hours
+208 	Train: 0.241121 	Valid: 0.238042 	Test: 0.239767 	time: 3.450072 minutes	remaining: 16.78829 hours
+209 	Train: 0.241195 	Valid: 0.238187 	Test: 0.240232 	time: 3.445800 minutes	remaining: 16.73070 hours
+210 	Train: 0.241097 	Valid: 0.237895 	Test: 0.240363 	time: 3.451537 minutes	remaining: 16.67325 hours
+Took 1.24587702751 to sample 400 numbers
+211 	Train: 0.241423 	Valid: 0.238232 	Test: 0.240168 	time: 3.453695 minutes	remaining: 16.61585 hours
+212 	Train: 0.241098 	Valid: 0.23779 	Test: 0.240056 	time: 3.453487 minutes	remaining: 16.55844 hours
+213 	Train: 0.24104 	Valid: 0.23792 	Test: 0.240096 	time: 3.452577 minutes	remaining: 16.50101 hours
+214 	Train: 0.241095 	Valid: 0.237645 	Test: 0.24016 	time: 3.451740 minutes	remaining: 16.44357 hours
+215 	Train: 0.241118 	Valid: 0.237686 	Test: 0.239915 	time: 3.450222 minutes	remaining: 16.38608 hours
+216 	Train: 0.240959 	Valid: 0.237973 	Test: 0.239525 	time: 3.448184 minutes	remaining: 16.32855 hours
+217 	Train: 0.24104 	Valid: 0.237546 	Test: 0.239802 	time: 3.447816 minutes	remaining: 16.27102 hours
+218 	Train: 0.241023 	Valid: 0.237797 	Test: 0.239522 	time: 3.447767 minutes	remaining: 16.21348 hours
+219 	Train: 0.241 	Valid: 0.23775 	Test: 0.239942 	time: 3.446530 minutes	remaining: 16.15592 hours
+220 	Train: 0.240872 	Valid: 0.237571 	Test: 0.239025 	time: 3.450878 minutes	remaining: 16.09845 hours
+Took 1.24835205078 to sample 400 numbers
+221 	Train: 0.240876 	Valid: 0.237534 	Test: 0.239521 	time: 3.456367 minutes	remaining: 16.04110 hours
+222 	Train: 0.240952 	Valid: 0.237 	Test: 0.239477 	time: 3.449889 minutes	remaining: 15.98361 hours
+223 	Train: 0.241102 	Valid: 0.237473 	Test: 0.239583 	time: 3.449858 minutes	remaining: 15.92611 hours
+224 	Train: 0.240835 	Valid: 0.237957 	Test: 0.239495 	time: 3.451740 minutes	remaining: 15.86866 hours
+225 	Train: 0.241015 	Valid: 0.237631 	Test: 0.239409 	time: 3.456931 minutes	remaining: 15.81131 hours
+226 	Train: 0.240902 	Valid: 0.238 	Test: 0.239666 	time: 3.454770 minutes	remaining: 15.75392 hours
+227 	Train: 0.240865 	Valid: 0.237565 	Test: 0.239807 	time: 3.454545 minutes	remaining: 15.69652 hours
+228 	Train: 0.240836 	Valid: 0.237634 	Test: 0.239495 	time: 3.458558 minutes	remaining: 15.63920 hours
+229 	Train: 0.240892 	Valid: 0.237579 	Test: 0.24008 	time: 3.455207 minutes	remaining: 15.58181 hours
+230 	Train: 0.240768 	Valid: 0.237184 	Test: 0.239765 	time: 3.456601 minutes	remaining: 15.52444 hours
+Took 1.25930094719 to sample 400 numbers
+231 	Train: 0.240947 	Valid: 0.23787 	Test: 0.238929 	time: 3.458954 minutes	remaining: 15.46712 hours
+232 	Train: 0.240865 	Valid: 0.237075 	Test: 0.239342 	time: 3.453136 minutes	remaining: 15.40968 hours
+233 	Train: 0.240682 	Valid: 0.237231 	Test: 0.239276 	time: 3.453758 minutes	remaining: 15.35226 hours
+234 	Train: 0.240709 	Valid: 0.237613 	Test: 0.239845 	time: 3.452095 minutes	remaining: 15.29480 hours
+235 	Train: 0.240635 	Valid: 0.236873 	Test: 0.239378 	time: 3.451453 minutes	remaining: 15.23733 hours
+236 	Train: 0.24067 	Valid: 0.23711 	Test: 0.239155 	time: 3.451241 minutes	remaining: 15.17985 hours
+237 	Train: 0.240748 	Valid: 0.237187 	Test: 0.239683 	time: 3.451010 minutes	remaining: 15.12237 hours
+238 	Train: 0.240729 	Valid: 0.237364 	Test: 0.23918 	time: 3.449047 minutes	remaining: 15.06486 hours
+239 	Train: 0.240709 	Valid: 0.237002 	Test: 0.239088 	time: 3.455979 minutes	remaining: 15.00747 hours
+240 	Train: 0.240479 	Valid: 0.237258 	Test: 0.239134 	time: 3.453835 minutes	remaining: 14.95003 hours
+Took 1.25814199448 to sample 400 numbers
+241 	Train: 0.240579 	Valid: 0.237131 	Test: 0.239637 	time: 3.450108 minutes	remaining: 14.89254 hours
+242 	Train: 0.240454 	Valid: 0.237117 	Test: 0.239477 	time: 3.448122 minutes	remaining: 14.83500 hours
+243 	Train: 0.240518 	Valid: 0.237728 	Test: 0.239137 	time: 3.451026 minutes	remaining: 14.77752 hours
+244 	Train: 0.24055 	Valid: 0.237611 	Test: 0.23941 	time: 3.451351 minutes	remaining: 14.72004 hours
+245 	Train: 0.240414 	Valid: 0.237758 	Test: 0.239115 	time: 3.449684 minutes	remaining: 14.66254 hours
+246 	Train: 0.240543 	Valid: 0.237232 	Test: 0.239031 	time: 3.450652 minutes	remaining: 14.60505 hours
+247 	Train: 0.240404 	Valid: 0.236698 	Test: 0.239211 	time: 3.450293 minutes	remaining: 14.54755 hours
+248 	Train: 0.240402 	Valid: 0.237124 	Test: 0.238889 	time: 3.454217 minutes	remaining: 14.49012 hours
+249 	Train: 0.240174 	Valid: 0.237405 	Test: 0.239454 	time: 3.455712 minutes	remaining: 14.43272 hours
+250 	Train: 0.240393 	Valid: 0.237125 	Test: 0.238869 	time: 3.455456 minutes	remaining: 14.37531 hours
+Took 1.25147891045 to sample 400 numbers
+251 	Train: 0.240455 	Valid: 0.236943 	Test: 0.239092 	time: 3.454723 minutes	remaining: 14.31788 hours
+252 	Train: 0.240439 	Valid: 0.236725 	Test: 0.239484 	time: 3.454070 minutes	remaining: 14.26045 hours
+253 	Train: 0.240246 	Valid: 0.237169 	Test: 0.239479 	time: 3.451319 minutes	remaining: 14.20297 hours
+254 	Train: 0.240478 	Valid: 0.237123 	Test: 0.238918 	time: 3.453394 minutes	remaining: 14.14552 hours
+255 	Train: 0.240363 	Valid: 0.237615 	Test: 0.238652 	time: 3.453950 minutes	remaining: 14.08808 hours
+256 	Train: 0.24022 	Valid: 0.236907 	Test: 0.238877 	time: 3.454192 minutes	remaining: 14.03064 hours
+257 	Train: 0.240333 	Valid: 0.237107 	Test: 0.238903 	time: 3.454596 minutes	remaining: 13.97321 hours
+258 	Train: 0.240028 	Valid: 0.237132 	Test: 0.239059 	time: 3.456360 minutes	remaining: 13.91580 hours
+259 	Train: 0.240193 	Valid: 0.236834 	Test: 0.23878 	time: 3.452862 minutes	remaining: 13.85834 hours
+260 	Train: 0.240181 	Valid: 0.237098 	Test: 0.238988 	time: 3.454933 minutes	remaining: 13.80091 hours
+Took 1.2451441288 to sample 400 numbers
+261 	Train: 0.240158 	Valid: 0.237012 	Test: 0.238634 	time: 3.452250 minutes	remaining: 13.74343 hours
+262 	Train: 0.240009 	Valid: 0.236546 	Test: 0.238877 	time: 3.455522 minutes	remaining: 13.68601 hours
+263 	Train: 0.240147 	Valid: 0.23702 	Test: 0.238708 	time: 3.450663 minutes	remaining: 13.62851 hours
+264 	Train: 0.240017 	Valid: 0.23672 	Test: 0.238753 	time: 3.448143 minutes	remaining: 13.57098 hours
+265 	Train: 0.240125 	Valid: 0.236529 	Test: 0.238608 	time: 3.447300 minutes	remaining: 13.51343 hours
+266 	Train: 0.240173 	Valid: 0.236746 	Test: 0.238902 	time: 3.449184 minutes	remaining: 13.45591 hours
+267 	Train: 0.239838 	Valid: 0.236403 	Test: 0.239077 	time: 3.446373 minutes	remaining: 13.39835 hours
+268 	Train: 0.240038 	Valid: 0.236453 	Test: 0.238826 	time: 3.455547 minutes	remaining: 13.34092 hours
+269 	Train: 0.240065 	Valid: 0.236576 	Test: 0.238431 	time: 3.452533 minutes	remaining: 13.28345 hours
+270 	Train: 0.239847 	Valid: 0.237233 	Test: 0.238145 	time: 3.456964 minutes	remaining: 13.22604 hours
+Took 1.2527589798 to sample 400 numbers
+271 	Train: 0.239836 	Valid: 0.236124 	Test: 0.238965 	time: 3.454083 minutes	remaining: 13.16859 hours
+272 	Train: 0.23983 	Valid: 0.236937 	Test: 0.238481 	time: 3.448651 minutes	remaining: 13.11106 hours
+273 	Train: 0.239927 	Valid: 0.236219 	Test: 0.238447 	time: 3.441336 minutes	remaining: 13.05343 hours
+274 	Train: 0.239771 	Valid: 0.235879 	Test: 0.238439 	time: 3.440950 minutes	remaining: 12.99580 hours
+275 	Train: 0.239701 	Valid: 0.235884 	Test: 0.238542 	time: 3.450475 minutes	remaining: 12.93830 hours
+276 	Train: 0.239865 	Valid: 0.236524 	Test: 0.238422 	time: 3.456476 minutes	remaining: 12.88088 hours
+277 	Train: 0.239617 	Valid: 0.236438 	Test: 0.238574 	time: 3.454162 minutes	remaining: 12.82343 hours
+278 	Train: 0.239629 	Valid: 0.236922 	Test: 0.238633 	time: 3.459975 minutes	remaining: 12.76606 hours
+279 	Train: 0.239816 	Valid: 0.2366 	Test: 0.237911 	time: 3.453914 minutes	remaining: 12.70860 hours
+280 	Train: 0.23949 	Valid: 0.236332 	Test: 0.238321 	time: 3.458074 minutes	remaining: 12.65120 hours
+Took 1.25032901764 to sample 400 numbers
+281 	Train: 0.239654 	Valid: 0.236076 	Test: 0.238034 	time: 3.452493 minutes	remaining: 12.59372 hours
+282 	Train: 0.239647 	Valid: 0.235907 	Test: 0.238598 	time: 3.454258 minutes	remaining: 12.53626 hours
+283 	Train: 0.239496 	Valid: 0.235716 	Test: 0.238332 	time: 3.448522 minutes	remaining: 12.47874 hours
+284 	Train: 0.23976 	Valid: 0.236133 	Test: 0.23799 	time: 3.448028 minutes	remaining: 12.42120 hours
+285 	Train: 0.239468 	Valid: 0.235873 	Test: 0.238048 	time: 3.447997 minutes	remaining: 12.36367 hours
+286 	Train: 0.239542 	Valid: 0.235875 	Test: 0.238097 	time: 3.450453 minutes	remaining: 12.30616 hours
+287 	Train: 0.239395 	Valid: 0.236336 	Test: 0.23833 	time: 3.452772 minutes	remaining: 12.24869 hours
+288 	Train: 0.239317 	Valid: 0.236127 	Test: 0.237758 	time: 3.448667 minutes	remaining: 12.19116 hours
+289 	Train: 0.23936 	Valid: 0.235915 	Test: 0.23804 	time: 3.447595 minutes	remaining: 12.13362 hours
+290 	Train: 0.239434 	Valid: 0.236137 	Test: 0.238531 	time: 3.445181 minutes	remaining: 12.07605 hours
+Took 1.25132012367 to sample 400 numbers
+291 	Train: 0.239374 	Valid: 0.236109 	Test: 0.238016 	time: 3.455194 minutes	remaining: 12.01861 hours
+292 	Train: 0.239304 	Valid: 0.236173 	Test: 0.237844 	time: 3.455222 minutes	remaining: 11.96116 hours
+293 	Train: 0.239332 	Valid: 0.235432 	Test: 0.237835 	time: 3.458247 minutes	remaining: 11.90375 hours
+294 	Train: 0.239292 	Valid: 0.235613 	Test: 0.237567 	time: 3.448992 minutes	remaining: 11.84623 hours
+295 	Train: 0.239126 	Valid: 0.235754 	Test: 0.237523 	time: 3.454372 minutes	remaining: 11.78877 hours
+296 	Train: 0.239055 	Valid: 0.235633 	Test: 0.237478 	time: 3.457985 minutes	remaining: 11.73135 hours
+297 	Train: 0.238978 	Valid: 0.236027 	Test: 0.237636 	time: 3.451739 minutes	remaining: 11.67386 hours
+298 	Train: 0.238993 	Valid: 0.235835 	Test: 0.238107 	time: 3.455566 minutes	remaining: 11.61641 hours
+299 	Train: 0.239069 	Valid: 0.23593 	Test: 0.237403 	time: 3.453019 minutes	remaining: 11.55893 hours
+300 	Train: 0.238947 	Valid: 0.23565 	Test: 0.23728 	time: 3.451028 minutes	remaining: 11.50143 hours
+Took 1.24504208565 to sample 400 numbers
+301 	Train: 0.238752 	Valid: 0.235351 	Test: 0.237535 	time: 3.451111 minutes	remaining: 11.44393 hours
+302 	Train: 0.238889 	Valid: 0.235208 	Test: 0.237644 	time: 3.449305 minutes	remaining: 11.38641 hours
+303 	Train: 0.238972 	Valid: 0.235124 	Test: 0.237455 	time: 3.447000 minutes	remaining: 11.32887 hours
+304 	Train: 0.238948 	Valid: 0.235528 	Test: 0.237266 	time: 3.451418 minutes	remaining: 11.27137 hours
+305 	Train: 0.238911 	Valid: 0.235782 	Test: 0.237004 	time: 3.445131 minutes	remaining: 11.21381 hours
+306 	Train: 0.238751 	Valid: 0.235809 	Test: 0.237517 	time: 3.449014 minutes	remaining: 11.15629 hours
+307 	Train: 0.238697 	Valid: 0.235224 	Test: 0.236904 	time: 3.444358 minutes	remaining: 11.09872 hours
+308 	Train: 0.238652 	Valid: 0.235032 	Test: 0.237397 	time: 3.449040 minutes	remaining: 11.04120 hours
+309 	Train: 0.238765 	Valid: 0.23498 	Test: 0.237297 	time: 3.459725 minutes	remaining: 10.98379 hours
+310 	Train: 0.238738 	Valid: 0.235356 	Test: 0.237048 	time: 3.450356 minutes	remaining: 10.92628 hours
+Took 1.24394106865 to sample 400 numbers
+311 	Train: 0.238684 	Valid: 0.235302 	Test: 0.237261 	time: 3.452795 minutes	remaining: 10.86880 hours
+312 	Train: 0.238674 	Valid: 0.235343 	Test: 0.236708 	time: 3.450404 minutes	remaining: 10.81129 hours
+313 	Train: 0.238349 	Valid: 0.235703 	Test: 0.236852 	time: 3.451506 minutes	remaining: 10.75379 hours
+314 	Train: 0.238468 	Valid: 0.235076 	Test: 0.23672 	time: 3.451966 minutes	remaining: 10.69630 hours
+315 	Train: 0.238392 	Valid: 0.235053 	Test: 0.237184 	time: 3.452456 minutes	remaining: 10.63881 hours
+316 	Train: 0.238517 	Valid: 0.234707 	Test: 0.23729 	time: 3.454078 minutes	remaining: 10.58134 hours
+317 	Train: 0.238488 	Valid: 0.235047 	Test: 0.237039 	time: 3.452121 minutes	remaining: 10.52385 hours
+318 	Train: 0.23851 	Valid: 0.234858 	Test: 0.236676 	time: 3.450469 minutes	remaining: 10.46634 hours
+319 	Train: 0.238311 	Valid: 0.23516 	Test: 0.237207 	time: 3.452073 minutes	remaining: 10.40885 hours
+320 	Train: 0.238223 	Valid: 0.234477 	Test: 0.23698 	time: 3.459446 minutes	remaining: 10.35143 hours
+Took 1.25647091866 to sample 400 numbers
+321 	Train: 0.238315 	Valid: 0.235028 	Test: 0.236837 	time: 3.458560 minutes	remaining: 10.29400 hours
+322 	Train: 0.23826 	Valid: 0.235157 	Test: 0.236907 	time: 3.453656 minutes	remaining: 10.23652 hours
+323 	Train: 0.238103 	Valid: 0.234471 	Test: 0.23679 	time: 3.453763 minutes	remaining: 10.17904 hours
+324 	Train: 0.238128 	Valid: 0.234956 	Test: 0.236939 	time: 3.451538 minutes	remaining: 10.12154 hours
+325 	Train: 0.238161 	Valid: 0.234495 	Test: 0.23705 	time: 3.453759 minutes	remaining: 10.06406 hours
+326 	Train: 0.238014 	Valid: 0.234833 	Test: 0.236853 	time: 3.453942 minutes	remaining: 10.00658 hours
+327 	Train: 0.238018 	Valid: 0.23452 	Test: 0.236622 	time: 3.451704 minutes	remaining: 9.949085 hours
+328 	Train: 0.23783 	Valid: 0.234253 	Test: 0.236778 	time: 3.452555 minutes	remaining: 9.891594 hours
+329 	Train: 0.237896 	Valid: 0.234196 	Test: 0.236691 	time: 3.451587 minutes	remaining: 9.834094 hours
+330 	Train: 0.238022 	Valid: 0.234353 	Test: 0.236229 	time: 3.453706 minutes	remaining: 9.776611 hours
+Took 1.25580096245 to sample 400 numbers
+331 	Train: 0.237962 	Valid: 0.234682 	Test: 0.236417 	time: 3.453388 minutes	remaining: 9.719126 hours
+332 	Train: 0.237873 	Valid: 0.234534 	Test: 0.23668 	time: 3.455951 minutes	remaining: 9.661661 hours
+333 	Train: 0.237704 	Valid: 0.234731 	Test: 0.236688 	time: 3.453273 minutes	remaining: 9.604174 hours
+334 	Train: 0.238058 	Valid: 0.234029 	Test: 0.236621 	time: 3.451166 minutes	remaining: 9.546669 hours
+335 	Train: 0.237869 	Valid: 0.234363 	Test: 0.236685 	time: 3.452059 minutes	remaining: 9.489170 hours
+336 	Train: 0.237835 	Valid: 0.233692 	Test: 0.236061 	time: 3.456848 minutes	remaining: 9.431711 hours
+337 	Train: 0.237598 	Valid: 0.234014 	Test: 0.236585 	time: 3.453614 minutes	remaining: 9.374225 hours
+338 	Train: 0.237628 	Valid: 0.234266 	Test: 0.236065 	time: 3.449393 minutes	remaining: 9.316704 hours
+339 	Train: 0.237451 	Valid: 0.23395 	Test: 0.236454 	time: 3.451368 minutes	remaining: 9.259200 hours
+340 	Train: 0.237668 	Valid: 0.234331 	Test: 0.236042 	time: 3.447626 minutes	remaining: 9.201665 hours
+Took 1.24440121651 to sample 400 numbers
+341 	Train: 0.237698 	Valid: 0.234289 	Test: 0.236202 	time: 3.449938 minutes	remaining: 9.144150 hours
+342 	Train: 0.237559 	Valid: 0.234468 	Test: 0.236185 	time: 3.452370 minutes	remaining: 9.086653 hours
+343 	Train: 0.237519 	Valid: 0.234039 	Test: 0.236299 	time: 3.451905 minutes	remaining: 9.029152 hours
+344 	Train: 0.237635 	Valid: 0.23408 	Test: 0.235617 	time: 3.452227 minutes	remaining: 8.971654 hours
+345 	Train: 0.237369 	Valid: 0.234188 	Test: 0.236167 	time: 3.452020 minutes	remaining: 8.914153 hours
+346 	Train: 0.2374 	Valid: 0.233916 	Test: 0.236122 	time: 3.446970 minutes	remaining: 8.856615 hours
+347 	Train: 0.237426 	Valid: 0.233836 	Test: 0.235955 	time: 3.450309 minutes	remaining: 8.799103 hours
+348 	Train: 0.23735 	Valid: 0.233607 	Test: 0.236501 	time: 3.452948 minutes	remaining: 8.741609 hours
+349 	Train: 0.237422 	Valid: 0.233624 	Test: 0.235642 	time: 3.450967 minutes	remaining: 8.684101 hours
+350 	Train: 0.237269 	Valid: 0.233617 	Test: 0.236495 	time: 3.446907 minutes	remaining: 8.626564 hours
+Took 1.24410414696 to sample 400 numbers
+351 	Train: 0.237235 	Valid: 0.233711 	Test: 0.235924 	time: 3.451546 minutes	remaining: 8.569060 hours
+352 	Train: 0.237068 	Valid: 0.233915 	Test: 0.235797 	time: 3.452789 minutes	remaining: 8.511564 hours
+353 	Train: 0.237239 	Valid: 0.233766 	Test: 0.236169 	time: 3.455507 minutes	remaining: 8.454088 hours
+354 	Train: 0.237032 	Valid: 0.233987 	Test: 0.235939 	time: 3.452023 minutes	remaining: 8.396586 hours
+355 	Train: 0.237263 	Valid: 0.234051 	Test: 0.23583 	time: 3.451881 minutes	remaining: 8.339084 hours
+356 	Train: 0.237142 	Valid: 0.233753 	Test: 0.235713 	time: 3.448562 minutes	remaining: 8.281559 hours
+357 	Train: 0.237069 	Valid: 0.233382 	Test: 0.235572 	time: 3.447122 minutes	remaining: 8.224024 hours
+358 	Train: 0.237005 	Valid: 0.23384 	Test: 0.235612 	time: 3.452522 minutes	remaining: 8.166526 hours
+359 	Train: 0.236897 	Valid: 0.233757 	Test: 0.235618 	time: 3.453006 minutes	remaining: 8.109031 hours
+360 	Train: 0.237 	Valid: 0.233625 	Test: 0.23584 	time: 3.451892 minutes	remaining: 8.051528 hours
+Took 1.247382164 to sample 400 numbers
+361 	Train: 0.236965 	Valid: 0.233188 	Test: 0.235963 	time: 3.455316 minutes	remaining: 7.994047 hours
+362 	Train: 0.236998 	Valid: 0.233916 	Test: 0.235609 	time: 3.454184 minutes	remaining: 7.936558 hours
+363 	Train: 0.23685 	Valid: 0.233393 	Test: 0.235654 	time: 3.452790 minutes	remaining: 7.879060 hours
+364 	Train: 0.236884 	Valid: 0.233163 	Test: 0.235567 	time: 3.458303 minutes	remaining: 7.821596 hours
+365 	Train: 0.236916 	Valid: 0.233591 	Test: 0.235718 	time: 3.454516 minutes	remaining: 7.764108 hours
+366 	Train: 0.236872 	Valid: 0.23344 	Test: 0.235688 	time: 3.453540 minutes	remaining: 7.706613 hours
+367 	Train: 0.236574 	Valid: 0.233593 	Test: 0.235344 	time: 3.455943 minutes	remaining: 7.649133 hours
+368 	Train: 0.236758 	Valid: 0.233571 	Test: 0.235512 	time: 3.456175 minutes	remaining: 7.591653 hours
+369 	Train: 0.236863 	Valid: 0.233455 	Test: 0.235543 	time: 3.455756 minutes	remaining: 7.534170 hours
+370 	Train: 0.236572 	Valid: 0.233632 	Test: 0.235205 	time: 3.455282 minutes	remaining: 7.476684 hours
+Took 1.26316213608 to sample 400 numbers
+371 	Train: 0.236714 	Valid: 0.233186 	Test: 0.234805 	time: 3.452686 minutes	remaining: 7.419182 hours
+372 	Train: 0.236552 	Valid: 0.233352 	Test: 0.235621 	time: 3.455813 minutes	remaining: 7.361698 hours
+373 	Train: 0.236717 	Valid: 0.233016 	Test: 0.235082 	time: 3.459080 minutes	remaining: 7.304232 hours
+374 	Train: 0.23664 	Valid: 0.232989 	Test: 0.234969 	time: 3.454124 minutes	remaining: 7.246736 hours
+375 	Train: 0.236439 	Valid: 0.233028 	Test: 0.235277 	time: 3.458466 minutes	remaining: 7.189265 hours
+376 	Train: 0.236681 	Valid: 0.2328 	Test: 0.235275 	time: 3.458874 minutes	remaining: 7.131795 hours
+377 	Train: 0.236312 	Valid: 0.232786 	Test: 0.23558 	time: 3.452350 minutes	remaining: 7.074289 hours
+378 	Train: 0.236534 	Valid: 0.23305 	Test: 0.23518 	time: 3.455149 minutes	remaining: 7.016797 hours
+379 	Train: 0.236395 	Valid: 0.23274 	Test: 0.235019 	time: 3.455490 minutes	remaining: 6.959307 hours
+380 	Train: 0.236524 	Valid: 0.232843 	Test: 0.235237 	time: 3.454832 minutes	remaining: 6.901813 hours
+Took 1.24737215042 to sample 400 numbers
+381 	Train: 0.23642 	Valid: 0.233019 	Test: 0.234816 	time: 3.453858 minutes	remaining: 6.844313 hours
+382 	Train: 0.236361 	Valid: 0.232455 	Test: 0.234927 	time: 3.460029 minutes	remaining: 6.786845 hours
+383 	Train: 0.23638 	Valid: 0.232494 	Test: 0.235219 	time: 3.456393 minutes	remaining: 6.729357 hours
+384 	Train: 0.236243 	Valid: 0.232626 	Test: 0.235094 	time: 3.454456 minutes	remaining: 6.671859 hours
+385 	Train: 0.236184 	Valid: 0.233011 	Test: 0.23497 	time: 3.454704 minutes	remaining: 6.614361 hours
+386 	Train: 0.236072 	Valid: 0.23269 	Test: 0.23486 	time: 3.455802 minutes	remaining: 6.556869 hours
+387 	Train: 0.236349 	Valid: 0.232528 	Test: 0.235049 	time: 3.450815 minutes	remaining: 6.499352 hours
+388 	Train: 0.236218 	Valid: 0.23262 	Test: 0.234855 	time: 3.447829 minutes	remaining: 6.441820 hours
+389 	Train: 0.236221 	Valid: 0.232614 	Test: 0.234896 	time: 3.452253 minutes	remaining: 6.384310 hours
+390 	Train: 0.236091 	Valid: 0.232376 	Test: 0.234865 	time: 3.452384 minutes	remaining: 6.326800 hours
+Took 1.25512886047 to sample 400 numbers
+391 	Train: 0.235905 	Valid: 0.23275 	Test: 0.234608 	time: 3.453387 minutes	remaining: 6.269295 hours
+392 	Train: 0.236102 	Valid: 0.232621 	Test: 0.234753 	time: 3.455245 minutes	remaining: 6.211798 hours
+393 	Train: 0.235946 	Valid: 0.2326 	Test: 0.234788 	time: 3.452843 minutes	remaining: 6.154290 hours
+394 	Train: 0.235847 	Valid: 0.232481 	Test: 0.23517 	time: 3.451247 minutes	remaining: 6.096774 hours
+395 	Train: 0.235876 	Valid: 0.232381 	Test: 0.235113 	time: 3.452245 minutes	remaining: 6.039263 hours
+396 	Train: 0.235982 	Valid: 0.232813 	Test: 0.234831 	time: 3.451959 minutes	remaining: 5.981750 hours
+397 	Train: 0.23585 	Valid: 0.232353 	Test: 0.23483 	time: 3.455910 minutes	remaining: 5.924255 hours
+398 	Train: 0.23592 	Valid: 0.232293 	Test: 0.234716 	time: 3.454609 minutes	remaining: 5.866753 hours
+399 	Train: 0.235829 	Valid: 0.232448 	Test: 0.234772 	time: 3.455827 minutes	remaining: 5.809256 hours
+400 	Train: 0.235633 	Valid: 0.232235 	Test: 0.23463 	time: 3.453031 minutes	remaining: 5.751747 hours
+Took 1.2456741333 to sample 400 numbers
+401 	Train: 0.23559 	Valid: 0.232508 	Test: 0.234141 	time: 3.452829 minutes	remaining: 5.694237 hours
+402 	Train: 0.235723 	Valid: 0.232259 	Test: 0.235043 	time: 3.454069 minutes	remaining: 5.636731 hours
+403 	Train: 0.235629 	Valid: 0.232306 	Test: 0.23449 	time: 3.454733 minutes	remaining: 5.579228 hours
+404 	Train: 0.235756 	Valid: 0.23249 	Test: 0.234654 	time: 3.450321 minutes	remaining: 5.521708 hours
+405 	Train: 0.23569 	Valid: 0.232146 	Test: 0.234533 	time: 3.452353 minutes	remaining: 5.464195 hours
+406 	Train: 0.235701 	Valid: 0.23227 	Test: 0.234313 	time: 3.452941 minutes	remaining: 5.406684 hours
+407 	Train: 0.235709 	Valid: 0.232391 	Test: 0.23432 	time: 3.452949 minutes	remaining: 5.349173 hours
+408 	Train: 0.235501 	Valid: 0.231764 	Test: 0.234427 	time: 3.451507 minutes	remaining: 5.291657 hours
+409 	Train: 0.235504 	Valid: 0.232068 	Test: 0.234097 	time: 3.452375 minutes	remaining: 5.234144 hours
+410 	Train: 0.235512 	Valid: 0.232192 	Test: 0.234498 	time: 3.453405 minutes	remaining: 5.176634 hours
+Took 1.25051593781 to sample 400 numbers
+411 	Train: 0.235507 	Valid: 0.23182 	Test: 0.234098 	time: 3.460295 minutes	remaining: 5.119149 hours
+412 	Train: 0.235512 	Valid: 0.232006 	Test: 0.234082 	time: 3.457681 minutes	remaining: 5.061654 hours
+413 	Train: 0.235608 	Valid: 0.232104 	Test: 0.234428 	time: 3.457769 minutes	remaining: 5.004159 hours
+414 	Train: 0.235583 	Valid: 0.231886 	Test: 0.234137 	time: 3.456163 minutes	remaining: 4.946657 hours
+415 	Train: 0.235382 	Valid: 0.231823 	Test: 0.234111 	time: 3.457297 minutes	remaining: 4.889159 hours
+416 	Train: 0.235384 	Valid: 0.231856 	Test: 0.234381 	time: 3.454553 minutes	remaining: 4.831651 hours
+417 	Train: 0.23545 	Valid: 0.231865 	Test: 0.233933 	time: 3.453367 minutes	remaining: 4.774138 hours
+418 	Train: 0.235398 	Valid: 0.231828 	Test: 0.233952 	time: 3.456468 minutes	remaining: 4.716636 hours
+419 	Train: 0.235335 	Valid: 0.231982 	Test: 0.234287 	time: 3.456896 minutes	remaining: 4.659134 hours
+420 	Train: 0.235387 	Valid: 0.231409 	Test: 0.234062 	time: 3.458072 minutes	remaining: 4.601636 hours
+Took 1.246571064 to sample 400 numbers
+421 	Train: 0.235208 	Valid: 0.231575 	Test: 0.233677 	time: 3.452634 minutes	remaining: 4.544120 hours
+422 	Train: 0.235314 	Valid: 0.231693 	Test: 0.234127 	time: 3.454290 minutes	remaining: 4.486609 hours
+423 	Train: 0.235292 	Valid: 0.231543 	Test: 0.23379 	time: 3.450424 minutes	remaining: 4.429085 hours
+424 	Train: 0.235166 	Valid: 0.231412 	Test: 0.234087 	time: 3.455723 minutes	remaining: 4.371578 hours
+425 	Train: 0.235247 	Valid: 0.231713 	Test: 0.233655 	time: 3.454940 minutes	remaining: 4.314068 hours
+426 	Train: 0.235238 	Valid: 0.231538 	Test: 0.233886 	time: 3.453058 minutes	remaining: 4.256553 hours
+427 	Train: 0.235162 	Valid: 0.231551 	Test: 0.233956 	time: 3.452322 minutes	remaining: 4.199035 hours
+428 	Train: 0.235071 	Valid: 0.23147 	Test: 0.23402 	time: 3.453245 minutes	remaining: 4.141519 hours
+429 	Train: 0.235072 	Valid: 0.231334 	Test: 0.233794 	time: 3.449560 minutes	remaining: 4.083993 hours
+430 	Train: 0.235027 	Valid: 0.2313 	Test: 0.233668 	time: 3.454785 minutes	remaining: 4.026482 hours
+Took 1.24841189384 to sample 400 numbers
+431 	Train: 0.235025 	Valid: 0.23185 	Test: 0.233293 	time: 3.453868 minutes	remaining: 3.968968 hours
+432 	Train: 0.235154 	Valid: 0.231358 	Test: 0.23361 	time: 3.453204 minutes	remaining: 3.911451 hours
+433 	Train: 0.235092 	Valid: 0.23154 	Test: 0.233683 	time: 3.453901 minutes	remaining: 3.853937 hours
+434 	Train: 0.235144 	Valid: 0.231271 	Test: 0.233284 	time: 3.455123 minutes	remaining: 3.796425 hours
+435 	Train: 0.234919 	Valid: 0.231474 	Test: 0.233835 	time: 3.447918 minutes	remaining: 3.738895 hours
+436 	Train: 0.234915 	Valid: 0.231342 	Test: 0.233501 	time: 3.448111 minutes	remaining: 3.681366 hours
+437 	Train: 0.23487 	Valid: 0.231456 	Test: 0.233287 	time: 3.448773 minutes	remaining: 3.623839 hours
+438 	Train: 0.234967 	Valid: 0.230787 	Test: 0.233535 	time: 3.448581 minutes	remaining: 3.566311 hours
+439 	Train: 0.23484 	Valid: 0.231426 	Test: 0.233784 	time: 3.454715 minutes	remaining: 3.508798 hours
+440 	Train: 0.234905 	Valid: 0.231125 	Test: 0.233763 	time: 3.447987 minutes	remaining: 3.451269 hours
+Took 1.24525308609 to sample 400 numbers
+441 	Train: 0.234724 	Valid: 0.231021 	Test: 0.233562 	time: 3.453472 minutes	remaining: 3.393753 hours
+442 	Train: 0.234779 	Valid: 0.231221 	Test: 0.233084 	time: 3.449668 minutes	remaining: 3.336228 hours
+443 	Train: 0.234564 	Valid: 0.230827 	Test: 0.23309 	time: 3.452100 minutes	remaining: 3.278709 hours
+444 	Train: 0.234798 	Valid: 0.231071 	Test: 0.233232 	time: 3.449906 minutes	remaining: 3.221184 hours
+445 	Train: 0.234668 	Valid: 0.231632 	Test: 0.233545 	time: 3.452639 minutes	remaining: 3.163666 hours
+446 	Train: 0.234647 	Valid: 0.231185 	Test: 0.233639 	time: 3.449276 minutes	remaining: 3.106141 hours
+447 	Train: 0.234726 	Valid: 0.231282 	Test: 0.23355 	time: 3.451084 minutes	remaining: 3.048619 hours
+448 	Train: 0.234577 	Valid: 0.231268 	Test: 0.233358 	time: 3.453680 minutes	remaining: 2.991103 hours
+449 	Train: 0.23469 	Valid: 0.231112 	Test: 0.233292 	time: 3.457395 minutes	remaining: 2.933593 hours
+450 	Train: 0.234604 	Valid: 0.231147 	Test: 0.233545 	time: 3.457503 minutes	remaining: 2.876083 hours
+Took 1.24885082245 to sample 400 numbers
+451 	Train: 0.234431 	Valid: 0.231041 	Test: 0.233216 	time: 3.451486 minutes	remaining: 2.818562 hours
+452 	Train: 0.234597 	Valid: 0.231232 	Test: 0.233213 	time: 3.451518 minutes	remaining: 2.761041 hours
+453 	Train: 0.234451 	Valid: 0.230982 	Test: 0.233329 	time: 3.454310 minutes	remaining: 2.703524 hours
+454 	Train: 0.234592 	Valid: 0.231039 	Test: 0.233064 	time: 3.448589 minutes	remaining: 2.645998 hours
+455 	Train: 0.234462 	Valid: 0.2309 	Test: 0.233384 	time: 3.452161 minutes	remaining: 2.588478 hours
+456 	Train: 0.234526 	Valid: 0.231038 	Test: 0.233033 	time: 3.453169 minutes	remaining: 2.530959 hours
+457 	Train: 0.234533 	Valid: 0.23076 	Test: 0.233204 	time: 3.454612 minutes	remaining: 2.473442 hours
+458 	Train: 0.234625 	Valid: 0.230815 	Test: 0.233029 	time: 3.452358 minutes	remaining: 2.415922 hours
+459 	Train: 0.23439 	Valid: 0.231076 	Test: 0.232559 	time: 3.455517 minutes	remaining: 2.358406 hours
+460 	Train: 0.234291 	Valid: 0.230559 	Test: 0.233176 	time: 3.452341 minutes	remaining: 2.300886 hours
+Took 1.25268816948 to sample 400 numbers
+461 	Train: 0.234351 	Valid: 0.230755 	Test: 0.2327 	time: 3.455860 minutes	remaining: 2.243370 hours
+462 	Train: 0.23427 	Valid: 0.230712 	Test: 0.232945 	time: 3.450375 minutes	remaining: 2.185846 hours
+463 	Train: 0.234267 	Valid: 0.230535 	Test: 0.232982 	time: 3.452813 minutes	remaining: 2.128326 hours
+464 	Train: 0.234483 	Valid: 0.230748 	Test: 0.233365 	time: 3.453847 minutes	remaining: 2.070807 hours
+465 	Train: 0.234314 	Valid: 0.230815 	Test: 0.232748 	time: 3.451260 minutes	remaining: 2.013284 hours
+466 	Train: 0.234191 	Valid: 0.230685 	Test: 0.232982 	time: 3.449817 minutes	remaining: 1.955760 hours
+467 	Train: 0.234318 	Valid: 0.230415 	Test: 0.23296 	time: 3.449142 minutes	remaining: 1.898235 hours
+468 	Train: 0.234334 	Valid: 0.230518 	Test: 0.232914 	time: 3.446979 minutes	remaining: 1.840708 hours
+469 	Train: 0.234195 	Valid: 0.230476 	Test: 0.2327 	time: 3.449899 minutes	remaining: 1.783184 hours
+470 	Train: 0.234268 	Valid: 0.230515 	Test: 0.232776 	time: 3.452570 minutes	remaining: 1.725663 hours
+Took 1.24699997902 to sample 400 numbers
+471 	Train: 0.234238 	Valid: 0.230859 	Test: 0.232927 	time: 3.451207 minutes	remaining: 1.668141 hours
+472 	Train: 0.234173 	Valid: 0.230596 	Test: 0.23272 	time: 3.449617 minutes	remaining: 1.610617 hours
+473 	Train: 0.234134 	Valid: 0.230317 	Test: 0.232967 	time: 3.449692 minutes	remaining: 1.553094 hours
+474 	Train: 0.23407 	Valid: 0.23052 	Test: 0.233046 	time: 3.448436 minutes	remaining: 1.495569 hours
+475 	Train: 0.234173 	Valid: 0.230451 	Test: 0.232604 	time: 3.451028 minutes	remaining: 1.438047 hours
+476 	Train: 0.234139 	Valid: 0.230274 	Test: 0.232779 	time: 3.448243 minutes	remaining: 1.380522 hours
+477 	Train: 0.234089 	Valid: 0.230235 	Test: 0.232603 	time: 3.447821 minutes	remaining: 1.322998 hours
+478 	Train: 0.234091 	Valid: 0.230416 	Test: 0.232615 	time: 3.449874 minutes	remaining: 1.265475 hours
+479 	Train: 0.23396 	Valid: 0.230454 	Test: 0.232706 	time: 3.450418 minutes	remaining: 1.207953 hours
+480 	Train: 0.234158 	Valid: 0.23008 	Test: 0.232376 	time: 3.450803 minutes	remaining: 1.150431 hours
+Took 1.25408911705 to sample 400 numbers
+481 	Train: 0.234041 	Valid: 0.230221 	Test: 0.232628 	time: 3.450651 minutes	remaining: 1.092909 hours
+482 	Train: 0.234162 	Valid: 0.230603 	Test: 0.232309 	time: 3.449583 minutes	remaining: 1.035386 hours
+483 	Train: 0.23396 	Valid: 0.230387 	Test: 0.233133 	time: 3.451140 minutes	remaining: 58.67190 minutes
+484 	Train: 0.234033 	Valid: 0.230224 	Test: 0.232503 	time: 3.453703 minutes	remaining: 55.22069 minutes
+485 	Train: 0.234009 	Valid: 0.230439 	Test: 0.23261 	time: 3.450534 minutes	remaining: 51.76938 minutes
+486 	Train: 0.233989 	Valid: 0.230391 	Test: 0.232562 	time: 3.450924 minutes	remaining: 48.31807 minutes
+487 	Train: 0.233925 	Valid: 0.23047 	Test: 0.232382 	time: 3.454686 minutes	remaining: 44.86687 minutes
+488 	Train: 0.233968 	Valid: 0.230263 	Test: 0.232413 	time: 3.451499 minutes	remaining: 41.41558 minutes
+489 	Train: 0.233871 	Valid: 0.229802 	Test: 0.232795 	time: 3.452460 minutes	remaining: 37.96431 minutes
+490 	Train: 0.233974 	Valid: 0.230648 	Test: 0.232905 	time: 3.450475 minutes	remaining: 34.51299 minutes
+Took 1.25351119041 to sample 400 numbers
+491 	Train: 0.233924 	Valid: 0.230103 	Test: 0.23243 	time: 3.458438 minutes	remaining: 31.06182 minutes
+492 	Train: 0.233797 	Valid: 0.229926 	Test: 0.232436 	time: 3.456236 minutes	remaining: 27.61059 minutes
+493 	Train: 0.233932 	Valid: 0.230102 	Test: 0.232547 	time: 3.448759 minutes	remaining: 24.15923 minutes
+494 	Train: 0.233808 	Valid: 0.23024 	Test: 0.23186 	time: 3.453882 minutes	remaining: 20.70794 minutes
+495 	Train: 0.233933 	Valid: 0.23012 	Test: 0.232441 	time: 3.455019 minutes	remaining: 17.25665 minutes
+496 	Train: 0.233782 	Valid: 0.229849 	Test: 0.23268 	time: 3.454463 minutes	remaining: 13.80535 minutes
+497 	Train: 0.233739 	Valid: 0.230265 	Test: 0.232384 	time: 3.454202 minutes	remaining: 10.35403 minutes
+498 	Train: 0.233688 	Valid: 0.230083 	Test: 0.232873 	time: 3.450825 minutes	remaining: 6.902685 minutes
+499 	Train: 0.233706 	Valid: 0.230253 	Test: 0.232177 	time: 3.451986 minutes	remaining: 3.451343 minutes
+500 	Train: 0.233744 	Valid: 0.229972 	Test: 0.232196 	time: 3.452043 minutes	remaining: 0.0 seconds
+Took 1.25074505806 to sample 400 numbers
