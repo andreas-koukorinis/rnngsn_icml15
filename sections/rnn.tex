@@ -1,1 +1,12 @@
-This is the RNN section.
+Traditional RNNs simulate a discrete-time system that has an input sequence \(\{x_1...x_t\}\) and a hidden state sequence \(\{h_1...h_t\}\) that map to an output sequence \(\{y_1...y_t\}\). The network is defined for timestep \(t\) in the sequence by the hidden and output equations:
+\begin{equation}
+	h_t = \Phi_h(W^Th_{t-1} + U^Tx_t + b_h)
+\end{equation}
+\begin{equation}
+	y_t = \Phi_y(V^Th_t + b_y)
+\end{equation}
+where \(\Phi_h\) and \(\Phi_y\) are element-wise nonlinear functions and \(W\), \(U\), \(V\), \(b_h\), and \(b_y\) are the network parameters.
+
+
+
+\subsection{Extension to deep RNN}

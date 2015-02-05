@@ -2,12 +2,12 @@ Generative stochastic networks (GSN) are a generalization of the denoising auto-
 
 \subsection{Denoising auto-encoder}
 Denoising auto-encoders use a Markov chain to learn a reconstruction distribution \(P(X|\widetilde{X})\) given a corruption process \(C(\widetilde{X}|X)\) for some data \(X\). Denoising auto-encoders have been shown as generative models \cite{bengio13a}, where the Markov chain can be iteratively sampled from:
-
-%\begin{align*}
- \(X_t \sim P_\Theta(X|\widetilde{X}_{t-1})\)\\
- \(\widetilde{X}_t \sim C(\widetilde{X}|X_t)\)
-%\end{align*}
-
+\begin{equation}
+	X_t \sim P_\Theta(X|\widetilde{X}_{t-1})
+\end{equation}
+\begin{equation}
+	\widetilde{X}_t \sim C(\widetilde{X}|X_t)
+\end{equation}
 As long as the learned distribution \(P_{\Theta_n}(X|\widetilde{X})\) is a consistent estimator of the true conditional distribution \(P(X|\widetilde{X})\) and the Markov chain is ergodic, then as \(n \rightarrow \infty\), the asymptotic distribution \(\pi_n(X)\) of the generated samples from the denoising auto-encoder converges to the data-generating distribution \(P(X)\) \cite{bengio13a}). 
 
 
@@ -23,11 +23,12 @@ However, the jump size \(\sigma\) between points must still be large enough to g
 \subsection{Generalizing to GSN}
 
 While denoising auto-encoders can rely on \(X_t\) alone through a deterministic procedure for the state of the Markov chain, GSNs introduce a latent variable \(H_t\) that acts as an additional state variable in the Markov chain along with the visible \(X_t\) \cite{gsn}:
-
-%\begin{align*}
- \(H_{t+1} \sim P_{\Theta_1}(H|H_t, X_t)\)\\
- \(X_{t+1} \sim  P_{\Theta_2}(X|H_{t+1})\)
-%\end{align*}
+\begin{equation}
+	H_{t+1} \sim P_{\Theta_1}(H|H_t, X_t)
+\end{equation}
+\begin{equation}
+	X_{t+1} \sim  P_{\Theta_2}(X|H_{t+1})
+\end{equation}
 
 %The resulting computational graph is shown in Figure 1.
 %\begin{figure}[h!]
