@@ -1,5 +1,5 @@
 This is the experiments section.
-
+Each RNN-GSN was first initialized with GSN parameters and trained with noise scheduling, which has been shown to help the network learn appropriate features during stochastic gradient descent \cite{noise_schedule}.
 \subsection{Sequences of MNIST digits}
 	arbitrary sequences of images.
 	\begin{itemize}
@@ -7,6 +7,8 @@ This is the experiments section.
 		\item Sequence2 introduces one bit of parity by alternating sequences 0-9 and 9-0 repeating, where the next value depends on whether the sequence is ascending or descending.
 		\item Sequence3 creates a longer, more complex sequence by introducing a second bit of parity. It is formed by:
 	\end{itemize}
+	
+Log-likelihoods are estimated by a Parzen density estimator, which is biased. Further validation can be seen qualitatively by the predicted samples produced from the model.
 
 \subsection{Sequences of polyphonic music}
 	midi stuff.
@@ -16,3 +18,5 @@ This is the experiments section.
 		\item MuseData ....
 		\item JSB chorales .....
 	\end{itemize}
+	
+Log-likelihoods estimated by the Parzen density estimator are biased and cannot be compared to the AIS estimation used by Boulanger-Lewandowski et al. However, accuracies as computed by Bay et al. are provided for comparison \cite{bay}.

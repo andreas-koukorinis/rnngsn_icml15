@@ -1,1 +1,3 @@
-This is the conclusion.
+We presented the RNN-GSN, a generative, non-probabilistic model for learning deep sequence representations. We validated its efficacy as a deep recurrent model on complex inputs with sequences of MNIST images and MIDI representations of polyphonic music. The RNN-GSN works as well as other deep recurrent models, such as the RNN-RBM, but is an easier framework to perform inference over and sample from due to its non-probabilistic nature.
+
+Further improvements and areas of study could be using LSTM units in the RNN or Hessian-free optimization, and combining depth at multiple stages of the RNN. We would like to look into using GSNs as both the input-to-hidden and hidden-to-output functions of the RNN, further reducing the complexity for representing the sequence. Finally, multimodal GSNs could provide benefits when the hidden representations of the input data distribution cannot be assumed as unimodal \cite{multi_gsn}.
