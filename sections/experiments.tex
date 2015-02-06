@@ -59,7 +59,7 @@ This sequence has a length of 62 digits, which is longer than most conventional 
 
 For reference, the Parzen estimate of a 3-layer, 5-walkback GSN trained on MNIST is $120 \pm 0.8$, and the Parzen estimate of using MNIST train samples is $24 \pm 1.6$.
 
-The RNN-GSN trained on Sequence3 probably has a higher Parzen estimate because the dataset is significantly reduced in size due to the constraint in generating the sequence.
+The RNN-GSN trained on Sequence3 probably has a higher Parzen estimate compared to the other sequences because the dataset is significantly reduced in size due to the constraint in generating the sequence. This gives an overall lower variance, which means the expected input $\hat{x}_t$ will seem closer to the original input and have a lower binary cross-entropy.
 
 \subsection{Sequences of polyphonic music}
 	We applied the RNN-GSN to probabilistic modeling of sequences of polyphonic music as MIDI files. Each dataset was used as described in \cite{rnnrbm}:
@@ -85,13 +85,13 @@ Log-likelihoods estimated by the Parzen density estimator are biased and cannot 
 %\end{table}
 
 \begin {table}[H]
- \caption {MIDI accuracy \%} \label{tab:parzen}
-\begin{tabular}{l | l l l l}
+ \caption {MIDI RNN-GSN Parzen log-likelihood estimations} \label{tab:parzen}
+\begin{tabular*}{0.5\textwidth}{ l l l l}
 \hline
-Model & Piano-midi & Nottingham & Muse & JSB\\
+Piano-midi & Nottingham & Muse & JSB\\
 \hline
-RNN-GSN  & $6.85 \pm 0.23$ & $22.54 \pm 0.14$ & $22.89 \pm 0.08$ & $21.82 \pm 0.16$
-\end{tabular}
+$6.85 \pm 0.23$ & $22.54 \pm 0.14$ & $22.89 \pm 0.08$ & $21.82 \pm 0.16$
+\end{tabular*}
 \end{table}
 
 One important difference to note: the RNN-RBM uses the visible input $x$ when constructing the RBM for each timestep, and the RNN emits the bias parameters $b_h$ and $b_x$. Essentially, the RNN-RBM evaluates $P(X=x_t|H,b_t)$ for each timestep.

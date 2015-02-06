@@ -8,7 +8,7 @@ Denoising auto-encoders use a Markov chain to learn a reconstruction distributio
 \begin{equation}
 	\widetilde{X}_t \sim C(\widetilde{X}|X_t)
 \end{equation}
-As long as the learned distribution \(P_{\Theta_n}(X|\widetilde{X})\) is a consistent estimator of the true conditional distribution \(P(X|\widetilde{X})\) and the Markov chain is ergodic, then as \(n \rightarrow \infty\), the asymptotic distribution \(\pi_n(X)\) of the generated samples from the denoising auto-encoder converges to the data-generating distribution \(P(X)\) \cite{bengio13a}). 
+As long as the learned distribution \(P_{\Theta_n}(X|\widetilde{X})\) is a consistent estimator of the true conditional distribution \(P(X|\widetilde{X})\) and the Markov chain is ergodic, then as \(n \rightarrow \infty\), the asymptotic distribution \(\pi_n(X)\) of the generated samples from the denoising auto-encoder converge to the data-generating distribution \(P(X)\) \cite{bengio13a}). 
 
 
 \subsection{Easing restrictive conditions on the denoising auto-encoder}
@@ -37,7 +37,7 @@ The resulting computational graph is shown in Figure \ref{fig:gsn}.
 \caption{GSN computational graph.}\label{fig:gsn}
 \end{figure}
 
-The latent state variable \(H\) can be equivalently defined as \(H_{t+1} = f_{\Theta_1}(X_t,Z_t,H_t)\), a learned function \(f\) with an independent noise source \(Z_t\) such that \(X_t\) cannot be reconstructed exactly from \(H_{t+1}\). If \(X_t\) could be recovered from \(H_{t+1}\), the reconstruction distribution would simply converge to the Dirac at \(X\). Denoising auto-encoders are therefore a special case of GSNs, where \(f\) is fixed instead of learned.
+The latent state variable \(H\) can be equivalently defined as \(H_{t+1} = f_{\Theta_1}(X_t,Z_t,H_t)\), a learned function \(f\) with an independent noise source \(Z_t\) such that \(X_t\) cannot be reconstructed exactly from \(H_{t+1}\). If \(X_t\) could be recovered from \(H_{t+1}\), the reconstruction distribution would simply converge to the Dirac at \(X\). Denoising auto-encoders are therefore a special case of GSNs, where \(f\) is fixed as the corruption process \(C(\widetilde{X}|X)\) instead of learned.
 
 GSNs also use the notion of walkbacks to aid training. Walkbacks are the process of generating samples by iteratively sampling from \(P_{\Theta_1}(H|H_t, X_t)\) and \(P_{\Theta_2}(X|H_{t+1})\) for a given input. By using walkbacks, the model is more likely to seek out spurious modes in the data distribution and correct for them \cite{bengio13a}. The resulting Markov chain of a GSN is inspired by Gibbs sampling, but with stochastic units at each layer that can be backpropagated \cite{rezende14}.
 
