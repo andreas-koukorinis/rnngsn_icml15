@@ -30,12 +30,12 @@ While denoising auto-encoders can rely on \(X_t\) alone through a deterministic 
 	X_{t+1} \sim  P_{\Theta_2}(X|H_{t+1})
 \end{equation}
 
-%The resulting computational graph is shown in Figure 1.
-%\begin{figure}[h!]
-%  \centering
- %   \includegraphics[width=0.3\textwidth]{gsn_computational_graph}
-%\caption{GSN computational graph.}
-%\end{figure}
+The resulting computational graph is shown in Figure \ref{fig:gsn}.
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.3\textwidth]{gsn_computational_graph}
+\caption{GSN computational graph.}\label{fig:gsn}
+\end{figure}
 
 The latent state variable \(H\) can be equivalently defined as \(H_{t+1} = f_{\Theta_1}(X_t,Z_t,H_t)\), a learned function \(f\) with an independent noise source \(Z_t\) such that \(X_t\) cannot be reconstructed exactly from \(H_{t+1}\). If \(X_t\) could be recovered from \(H_{t+1}\), the reconstruction distribution would simply converge to the Dirac at \(X\). Denoising auto-encoders are therefore a special case of GSNs, where \(f\) is fixed instead of learned.
 
@@ -49,10 +49,10 @@ GSNs also use the notion of walkbacks to aid training. Walkbacks are the process
 
 Experimental results with GSNs show that their latent states mix well between the major modes of the data - mixing faster at higher layers in the model \cite{gsn}. Using this property, we tested a simple temporal GSN model to predict sequences of inputs. The temporal GSN uses a linear transformation \(H \rightarrow H\) to predict \(P(H_t|H_{t-1},...,H_{t-n})\) with an input history of size \(n\). Using this predicted \(H_t\), an expected input \(x_t\) was sampled from the model's learned reconstuction distribution \(P_{\Theta_2}(X|H)\).
 
-Qualitatively, this model appears to predict temporal dependencies well within its history window \(n\) (Figure 3). This result provided motivation to use the latent state \(H\) as the emitted parameter in a better-suited temporal model, such as an RNN.
+Qualitatively, this model appears to predict temporal dependencies well within its history window \(n\) (Figure \ref{fig:tgsn}). This result provided motivation to use the latent state \(H\) as the emitted parameter in a better-suited temporal model, such as an RNN.
 
 \begin{figure}[h!]
   \centering
     \includegraphics[width=0.5\textwidth]{tgsn}
-\caption{Temporal GSN with history \(n=2\) trained on an arbitrary MNIST sequence. Original input sequence is on the left, a noisy version of the input fed into the model is in the middle, and the predicted input based on the history is on the right.}
+\caption{Temporal GSN with history \(n=2\) trained on an arbitrary MNIST sequence. Original input sequence is on the left, a noisy version of the input fed into the model is in the middle, and the predicted input based on the history is on the right.}\label{fig:tgsn}
 \end{figure}
