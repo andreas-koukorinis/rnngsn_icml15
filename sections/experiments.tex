@@ -1,5 +1,4 @@
 We experimented with the RNN-GSN described by Algorithm \ref{algo} on sequences of MNIST images and standard MIDI datasets.
-
 Each RNN-GSN was first initialized with GSN parameters and trained with noise scheduling, which has been shown to help the network learn appropriate features during stochastic gradient descent \cite{noise_schedule}.
 
 The GSNs used $1500$ hidden units, $3$ hidden layers, and $5$ walkbacks, and the RNNs used $1500$ hidden units and $1$ hidden layer. $Tanh$ activation was used for hidden units, $sigmoid$ activation for visible inputs, and the network was trained using stochastic gradient descent on a binary cross-entropy cost with momentum of $0.5$ on the parameters and annealing of $0.995$ on the learning rate starting at $0.25$. GSN noise was added as salt-and-pepper, starting at $0.7$ with a schedule rate of $0.98$. MNIST input dimensionality is 784 and MIDI input dimensionality is 88.
@@ -85,5 +84,4 @@ RNN-GSN  & xx.xx  & xx.xx  & xx.xx  & xx.xx\\
 \end{table}
 
 One important difference to note: the RNN-RBM uses the visible input $x$ when constructing the RBM for each timestep, and the RNN emits the bias parameters $b_h$ and $b_x$. Essentially, the RNN-RBM evaluates $P(X=x_t|H,b_t)$ for each timestep.
-
 The RNN-GSN, on the other hand, only uses the hidden state $H_t$ emitted by the RNN to construct an expected input $\hat{x}_t$ for each timestep, sampling from the GSN's learned distribution $P(X|H)$. This means the predicted input at timestep $t$ is an expected value of the distribution $P(X|H_t)$. For a different accuracy measure, $P(X=x_t|H_t)$ could have been evaluated as well.
