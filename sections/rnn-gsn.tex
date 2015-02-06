@@ -14,7 +14,7 @@ This model retains separation between the RNN and the GSN because the RNN hidden
 
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.45\textwidth]{rnngsn}
+    \includegraphics[width=0.5\textwidth]{rnngsn}
 \caption{RNN-GSN architecture. Input distribution is X, GSN hidden layers are H, and recurrent hidden units are U.}\label{fig:rnngsn1} 
 \end{figure}
 
@@ -29,7 +29,7 @@ L(\{x\}) = \frac{1}{T} \sum\limits_{t=1}^T -x_t log(\hat{x}_t) + (1-x_t) log(1-\
 \subsection{Algorithm}
 The RNN-GSN shown in Figure \ref{fig:rnngsn1} and used in the experiments (Section \ref{experiments}) can be trained as follows:
 \begin{algorithm}
-\caption{RNN-GSN training}
+\caption{RNN-GSN training}\label{algo}
 \begin{algorithmic}
 	\STATE GSN parameters $\Theta_{GSN} =$ weights $W_{xh}$ and $W_{hh}$, biases $b_x$ and $b_h$, and $k$ walkbacks.
 	\STATE RNN parameters $\Theta_{RNN} =$ weights $W_{xu}$, $W_{uu}$, $W_{uh}$, and bias $b_u$.
@@ -86,9 +86,9 @@ This structure fully separates the RNN states from the original input $X$, and c
 
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.45\textwidth]{rnngsn_extension}
+    \includegraphics[width=0.5\textwidth]{rnngsn_extension}
 \caption{Extension of the RNN-GSN to use both deep input-to-hidden and hidden-to-output functions with a GSN.}\label{fig:rnngsn2}
 \end{figure}
 
-Finally, this structure can be theoretically extended to a deeper recurrent model, which we will call a sequence encoding network (SEN). When considering the GSN and RNN as separate layers (Figure \ref{fig:rnngsn2}), they can be alternately stacked for an arbitrary number of layers to handle arbitrary input and temporal complexity. While combined training would be extremely difficult due to the exploding gradient problem, this model can utilize layer-wise pretraining techniques to first learn input representations and then recurrent relations, continuing as the layers stack. This model combines the input-to-hidden, hidden-to-hidden, hidden-to-output, and stacking aspects of deep RNNs discussed in Section \ref{deep_rnn}.
+Finally, this structure can be theoretically extended to a deeper recurrent model, which we will call a sequence encoding network (SEN). When considering the GSN and RNN as separate layers (Figure \ref{fig:rnngsn2}), they can be alternately stacked to handle arbitrary input and temporal complexity. While combined training would be extremely difficult due to the exploding gradient problem, this model can utilize layer-wise pretraining techniques to first learn input representations and then recurrent relations, continuing as the layers stack. This model combines the input-to-hidden, hidden-to-hidden, hidden-to-output, and stacking aspects of deep RNNs discussed in Section \ref{deep_rnn}.
 

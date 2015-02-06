@@ -1,5 +1,8 @@
-This is the experiments section.
+We experimented with the RNN-GSN described by Algorithm \ref{algo} on sequences of MNIST images and standard MIDI datasets.
+
 Each RNN-GSN was first initialized with GSN parameters and trained with noise scheduling, which has been shown to help the network learn appropriate features during stochastic gradient descent \cite{noise_schedule}.
+
+The GSNs used $1500$ hidden units, $3$ hidden layers, and $5$ walkbacks, and the RNNs used $1500$ hidden units and $1$ hidden layer. $Tanh$ activation was used for hidden units, $sigmoid$ activation for visible inputs, and the network was trained using stochastic gradient descent on a binary cross-entropy cost with momentum of $0.5$ on the parameters and annealing of $0.995$ on the learning rate starting at $0.25$. GSN noise was added as salt-and-pepper, starting at $0.7$ with a schedule rate of $0.98$. MNIST input dimensionality is 784 and MIDI input dimensionality is 88.
 \subsection{Sequences of MNIST digits}
 	arbitrary sequences of images.
 	\begin{itemize}
@@ -11,12 +14,22 @@ Each RNN-GSN was first initialized with GSN parameters and trained with noise sc
 Log-likelihoods are estimated by a Parzen density estimator, which is biased. Further validation can be seen qualitatively by the predicted samples produced from the model.
 
 \subsection{Sequences of polyphonic music}
-	midi stuff.
-	\begin{itemize}
-		\item Piano-midi.de .......
-		\item Nottingham .....
-		\item MuseData ....
-		\item JSB chorales .....
-	\end{itemize}
+	We applied the RNN-GSN to probabilistic modeling of sequences of polyphonic music as MIDI files. Each dataset was used as described in \cite{rnnrbm}:
+
+\textbf{Piano-midi.de} is a classical piano MIDI archive.\\
+\textbf{Nottingham} is a collection of folk tunes.\\
+\textbf{MuseData} is a library of orchestral and piano classical music from www.musedata.org.\\
+\textbf{JSB chorales} is the corpus of 382 four-part harmonized chorales by J. S. Bach.
 	
 Log-likelihoods estimated by the Parzen density estimator are biased and cannot be compared to the AIS estimation used by Boulanger-Lewandowski et al. However, accuracies as computed by Bay et al. are provided for comparison \cite{bay}.
+
+\begin {table}[H]
+ \caption {MIDI accuracy \%} \label{tab:midi}
+\begin{tabular}{l | l l l l}
+\hline
+Model & Piano-midi & Nottingham & Muse & JSB\\
+\hline
+RNN-RBM & 28.92 & 75.40 & 34.02 & 33.12\\
+RNN-GSN  & xx.xx  & xx.xx  & xx.xx  & xx.xx
+\end{tabular}
+\end{table}
