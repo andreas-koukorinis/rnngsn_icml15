@@ -58,7 +58,9 @@ This sequence has a length of 62 digits, which is longer than most conventional 
 \caption{RNN-GSN trained with noise scheduling on Sequence3 after 500 training epochs. Original sequence is on the left, noisy input to the model is in the middle, and output expected sequence is on the right.}\label{fig:s3}
 \end{figure}
 
-For reference, the Parzen estimate of a 2-layer, 4-walkback GSN trained on MNIST from \cite{gsn} is $-214 \pm 1.1$.
+For reference, the Parzen estimate of a 3-layer, 5-walkback GSN trained on MNIST is $120 \pm 0.8$, and the Parzen estimate of using MNIST train samples is $24 \pm 1.6$.
+
+The RNN-GSN trained on Sequence3 probably has a higher Parzen estimate because the dataset is significantly reduced in size due to the constraint in generating the sequence.
 
 \subsection{Sequences of polyphonic music}
 	We applied the RNN-GSN to probabilistic modeling of sequences of polyphonic music as MIDI files. Each dataset was used as described in \cite{rnnrbm}:
